@@ -4,6 +4,12 @@ All notable changes to Sashwell Lite are listed here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] - 2026-11-22
+
+### Changed
+
+- Theme screenshot saved as JPEG: 108 KB instead of 543 KB.
+
 ## [1.0.0] - 2026-11-22
 
 ### Added

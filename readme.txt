@@ -4,7 +4,7 @@ Tags: blog, custom-logo, block-patterns, translation-ready
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,9 @@ Untick "Animations" under Appearance > Customize > Theme options > Footer. Visit
 "reduce motion" on their device never see them.
 
 == Changelog ==
+
+= 1.0.1 =
+* Smaller theme screenshot (JPEG, 108 KB instead of 543 KB).
 
 = 1.0.0 =
 * First release.

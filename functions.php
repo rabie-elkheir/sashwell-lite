@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SASHWELL_LITE_VERSION', '1.0.0' );
+define( 'SASHWELL_LITE_VERSION', '1.0.1' );
 define( 'SASHWELL_LITE_DIR', get_template_directory() );
 define( 'SASHWELL_LITE_URI', get_template_directory_uri() );
 define( 'SASHWELL_LITE_INC', SASHWELL_LITE_DIR . '/inc' );
