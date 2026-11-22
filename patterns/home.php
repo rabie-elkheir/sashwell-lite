@@ -7,15 +7,17 @@
  * Block Types: core/post-content
  * Post Types: page
  * Viewport Width: 1400
- * Description: A whole home page: hero, services, steps, prices, what is included, figures, reviews, questions and a call to action. Best on a page using the Landing page template.
+ * Description: A whole home page: hero with a photo, services, about, steps, prices, what is included, figures, reviews, questions and a call to action. Best on a page using the Landing page template.
  *
  * @package Sashwell_Lite
  */
 
 ?>
-<!-- wp:pattern {"slug":"sashwell-lite/hero"} /-->
+<!-- wp:pattern {"slug":"sashwell-lite/hero-photo"} /-->
 
 <!-- wp:pattern {"slug":"sashwell-lite/services"} /-->
+
+<!-- wp:pattern {"slug":"sashwell-lite/about"} /-->
 
 <!-- wp:pattern {"slug":"sashwell-lite/steps"} /-->
 

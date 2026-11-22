@@ -23,8 +23,9 @@ of the page be calm type, hairlines and white space.
 * Quiet motion that switches off with the visitor's "reduce motion" setting or the footer switch.
 * Blog in a list or a grid, a featured article, reading times, topics, a contents list in long
   articles and a reading progress bar.
-* Ten block patterns (hero, services, how it works, prices, what is included, figures, reviews,
-  questions, call to action and a full home page) and a Landing page template.
+* Thirteen block patterns (two heroes, services as a list or with photos, about, how it works,
+  prices, what is included, figures, reviews, questions, call to action and a full home page)
+  and a Landing page template.
 * Every option under Appearance > Customize > Theme options. No plugins needed.
 * Right-to-left ready, translation ready, self-hosted fonts (no requests to other servers).
 
@@ -100,5 +101,18 @@ General Public License for more details.
 * Icons and the Sashwell wordmark, (C) 2026 Rabie Elkheir
   License: GPLv2 or later. Drawn for this theme (inc/icons-data.php).
 
-* Screenshot: made from the theme's own block patterns, no photographs.
+Photos in assets/images (used by the block patterns and the screenshot), all from the
+WordPress Photo Directory, License: CC0 1.0 Universal (Public Domain Dedication),
+https://creativecommons.org/publicdomain/zero/1.0/
+
+* hero-mopping.webp, by nilovelez, https://wordpress.org/photos/photo/31367864bb/
+* mops.webp, by keicaldina, https://wordpress.org/photos/photo/2556a90fef/
+* bedroom.webp, by morenoca3, https://wordpress.org/photos/photo/226ae161ca/
+* kitchen.webp, by morenoca3, https://wordpress.org/photos/photo/8756ae137b/
+* office.webp, by wprashed, https://wordpress.org/photos/photo/2226a1fcdb/
+* window-cleaning.webp, by nilovelez, https://wordpress.org/photos/photo/709665a017/
+
+All photos were cropped and resized for the theme.
+
+* Screenshot: made from the theme's own block patterns and the photos above.
   License: GPLv2 or later.

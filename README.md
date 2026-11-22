@@ -13,7 +13,7 @@ and keeps the rest of the page to clear type, hairlines and white space. It need
 - Light and dark mode, chosen by the visitor
 - Quiet motion that respects the visitor's reduced-motion setting
 - Blog in a list or a grid, featured article, reading time, contents list for long articles
-- Ten block patterns and a Landing page template for building a full home page
+- Thirteen block patterns, with CC0 photos, and a Landing page template for building a full home page
 - Block styles: "Ticked" list and "Text link" button
 - All options in Appearance > Customize > Theme options
 - Translation ready, self-hosted fonts, no requests to other servers

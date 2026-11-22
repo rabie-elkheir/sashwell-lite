@@ -17,7 +17,8 @@
  * 9. Reviews
  * 10. Questions
  * 11. Call to action band
- * 12. Phones
+ * 12. Photos: hero photo, service cards, about
+ * 13. Phones
  *
  * Two of the pattern looks are also block styles for any block: "Ticked" on a List
  * (.is-style-swl-ticks) and "Text link" on a Button (.is-style-swl-link).
@@ -36,12 +37,6 @@
  */
 [class*="swl-"] .wp-block-group__inner-container {
 	display: contents;
-}
-
-/* In the block editor, the sections are as wide as the page, as on the site. */
-.wp-block:is(.swl-sec, .swl-hero, .swl-cta),
-[class*="swl-"] .wp-block {
-	max-inline-size: none;
 }
 
 .swl-sec .wrap,
@@ -1061,7 +1056,183 @@
 	border-color: #fff;
 }
 
-/* 12. Phones -------------------------------------------------------------- */
+/* 12. Photos ------------------------------------------------------------- */
+.swl-photo.wp-block-image {
+	margin: 0;
+}
+
+.swl-photo img {
+	display: block;
+	inline-size: 100%;
+	block-size: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: var(--r-card, 20px);
+}
+
+.swl-photo--tall img {
+	aspect-ratio: 4 / 5;
+}
+
+[data-theme=dark] .swl-photo img {
+	filter: brightness(.9) saturate(.95);
+}
+
+/* Hero: the photo with a small note over its corner. */
+.swl-hero-media {
+	position: relative;
+	max-inline-size: 30rem;
+	margin-inline-start: auto;
+}
+
+.swl-hero--photo .swl-photo img {
+	border-radius: var(--r-card, 20px);
+	box-shadow: 0 30px 60px -20px #00000080;
+}
+
+.swl-hero-note {
+	position: absolute;
+	inset-inline-start: -1.5rem;
+	inset-block-end: 1.75rem;
+	display: grid;
+	gap: .15rem;
+	margin: 0;
+	padding: .9rem 1.15rem .9rem 2.6rem;
+	border-radius: var(--r-sm, 12px);
+	background: var(--surface);
+	color: var(--stone);
+	font-size: var(--fs-micro);
+	box-shadow: 0 20px 40px -16px #00000073;
+}
+
+[dir=rtl] .swl-hero-note {
+	padding: .9rem 2.6rem .9rem 1.15rem;
+}
+
+.swl-hero-note::before {
+	content: "";
+	position: absolute;
+	inset-inline-start: 1rem;
+	inset-block-start: 50%;
+	inline-size: 1.05rem;
+	block-size: 1.05rem;
+	margin-block-start: -.525rem;
+	border-radius: 6px;
+	background: var(--action) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+}
+
+.swl-hero-note strong {
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-size: .9375rem;
+}
+
+[data-theme=dark] .swl-hero-note {
+	background: var(--d-raise);
+}
+
+/* Service cards: photo, price, title, line, link. No box: type and space carry them. */
+.swl-cards.wp-block-columns {
+	gap: 2.5rem var(--gutter);
+	margin: 0;
+}
+
+:is(.swl-card, .swl-card > .wp-block-group__inner-container) > * {
+	margin: 0;
+}
+
+.swl-card .swl-photo {
+	margin-block-end: 1.25rem;
+}
+
+.swl-card .swl-photo img {
+	transition: transform var(--dur-3, .48s) var(--ease-out);
+}
+
+.swl-card {
+	overflow: hidden;
+}
+
+.swl-card .swl-photo {
+	overflow: hidden;
+	border-radius: var(--r-card, 20px);
+}
+
+.swl-card:hover .swl-photo img {
+	transform: scale(1.03);
+}
+
+html:not(.motion) .swl-card:hover .swl-photo img {
+	transform: none;
+}
+
+.swl-card .swl-price {
+	color: var(--action-text);
+	font-size: var(--fs-micro);
+	font-weight: 600;
+	letter-spacing: var(--ls-caps, .12em);
+	text-transform: uppercase;
+}
+
+.swl-card h3 {
+	margin-block-start: .4rem;
+	font-size: var(--t-h3);
+	line-height: 1.1;
+}
+
+.swl-card p:not(.swl-price) {
+	margin-block-start: .6rem;
+	max-inline-size: 26rem;
+	color: var(--stone);
+}
+
+.swl-card .wp-block-buttons {
+	margin-block-start: .75rem;
+}
+
+/* About: a large photo with a smaller one over its corner. */
+.swl-about-media {
+	position: relative;
+	padding-block-end: 3rem;
+	padding-inline-end: 3rem;
+}
+
+.swl-about-media .swl-photo--inset {
+	position: absolute;
+	inset-inline-end: 0;
+	inset-block-end: 0;
+	inline-size: 46%;
+}
+
+.swl-about-media .swl-photo--inset img {
+	border: 6px solid var(--mist);
+	border-radius: var(--r-card, 20px);
+}
+
+.swl-about .wp-block-column > .swl-ticks,
+.swl-about .wp-block-column > .is-style-swl-ticks {
+	border-block-start: 1px solid var(--line);
+}
+
+.swl-sign {
+	color: var(--stone);
+	font-size: var(--fs-small);
+}
+
+.swl-sign strong {
+	display: block;
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-size: 1.125rem;
+}
+
+@media (min-width: 48em) {
+	.swl-about.wp-block-columns {
+		column-gap: clamp(2rem, 1rem + 4vw, 5rem);
+	}
+}
+
+/* 13. Phones -------------------------------------------------------------- */
 @media (max-width: 47.99em) {
 	.swl-hero {
 		padding-inline: .5rem;
@@ -1077,5 +1248,18 @@
 
 	.swl-row h3 {
 		font-size: var(--t-h4, 1.3125rem);
+	}
+
+	.swl-hero-media {
+		margin-inline: 0;
+	}
+
+	.swl-hero-note {
+		inset-inline-start: .75rem;
+	}
+
+	.swl-about-media {
+		padding-inline-end: 1.5rem;
+		padding-block-end: 2rem;
 	}
 }

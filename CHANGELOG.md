@@ -9,4 +9,4 @@ All notable changes to Sashwell Lite are listed here. The format follows
 ### Added
 
 - First release: header, side panel, phone contact bar, light and dark mode, blog layouts,
-  404 page, ten block patterns, Landing page template, two block styles and Customizer options.
+  404 page, thirteen block patterns (with CC0 photos from the WordPress Photo Directory), Landing page template, two block styles and Customizer options.

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-22T21:01:26+00:00\n"
+"POT-Creation-Date: 2026-11-22T21:25:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: sashwell-lite\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css:6
-msgid "A calm, type-led theme for cleaning companies and other local service businesses. Clear header with a phone line, a side panel with contact details and the areas you cover, a call and WhatsApp bar on phones, light and dark mode, and a blog with a featured article, reading times and a contents list. Ten block patterns (hero, services, prices, how it works, figures, reviews, questions, call to action) and a Landing page template let you build a full home page with the block editor, no plugins needed. Everything is set under Appearance > Customize > Theme options."
+msgid "A calm, type-led theme for cleaning companies and other local service businesses. Clear header with a phone line, a side panel with contact details and the areas you cover, a call and WhatsApp bar on phones, light and dark mode, and a blog with a featured article, reading times and a contents list. Thirteen block patterns (heroes, services, about, prices, how it works, figures, reviews, questions, call to action) and a Landing page template let you build a full home page with the block editor, no plugins needed. Everything is set under Appearance > Customize > Theme options."
 msgstr ""
 
 #. Author of the theme
@@ -656,6 +656,7 @@ msgid "Get a quote"
 msgstr ""
 
 #: inc/options.php:39
+#: patterns/services-photos.php:62
 msgid "Get a price"
 msgstr ""
 
@@ -806,6 +807,60 @@ msgstr ""
 msgid "Landing page"
 msgstr ""
 
+#: patterns/about.php:3
+msgctxt "Pattern title"
+msgid "About with photos"
+msgstr ""
+
+#: patterns/about.php:8
+msgctxt "Pattern description"
+msgid "Two overlapping photos next to the company story, three ticked promises and a signature line."
+msgstr ""
+
+#: patterns/about.php:20
+msgid "Four washed mops drying against a wall"
+msgstr ""
+
+#: patterns/about.php:24
+msgid "Two window cleaners on ropes outside an office block"
+msgstr ""
+
+#: patterns/about.php:31
+msgid "About us"
+msgstr ""
+
+#: patterns/about.php:35
+msgid "Two people and a van,"
+msgstr ""
+
+#: patterns/about.php:35
+msgid "thirty-four today."
+msgstr ""
+
+#: patterns/about.php:39
+msgid "We started in 2014 with one rule: the person who cleans your home is someone we employ, train and insure ourselves. No agencies, no subcontractors, and the same crew every visit."
+msgstr ""
+
+#: patterns/about.php:44
+msgid "Every cleaner employed, DBS-checked and insured"
+msgstr ""
+
+#: patterns/about.php:48
+msgid "A written job sheet after every clean"
+msgstr ""
+
+#: patterns/about.php:52
+msgid "Anything missed is redone free within 24 hours"
+msgstr ""
+
+#: patterns/about.php:57
+msgid "Maria Okoye"
+msgstr ""
+
+#: patterns/about.php:57
+msgid "Founder, still on the Tuesday rota"
+msgstr ""
+
 #: patterns/cta.php:3
 msgctxt "Pattern title"
 msgid "Call to action"
@@ -902,6 +957,67 @@ msgstr ""
 msgid "Ask a question"
 msgstr ""
 
+#: patterns/hero-photo.php:3
+msgctxt "Pattern title"
+msgid "Hero with a photo"
+msgstr ""
+
+#: patterns/hero-photo.php:8
+msgctxt "Pattern description"
+msgid "Dark framed hero with the page heading, two buttons, a proof line and a photo with a small job note."
+msgstr ""
+
+#: patterns/hero-photo.php:20
+msgid "House and office cleaning since 2014"
+msgstr ""
+
+#: patterns/hero-photo.php:24
+#: patterns/hero.php:24
+msgid "A clean home, written up"
+msgstr ""
+
+#: patterns/hero-photo.php:24
+#: patterns/hero.php:24
+msgid "line by line."
+msgstr ""
+
+#: patterns/hero-photo.php:28
+#: patterns/hero.php:28
+msgid "Regular and deep cleans by the same vetted crew each visit. You get a job sheet with every room ticked off, and a clear price before we start."
+msgstr ""
+
+#: patterns/hero-photo.php:33
+#: patterns/hero.php:33
+msgid "Book a clean"
+msgstr ""
+
+#: patterns/hero-photo.php:37
+#: patterns/hero.php:37
+msgid "See prices"
+msgstr ""
+
+#: patterns/hero-photo.php:42
+#: patterns/hero.php:42
+msgid "4.9 out of 5"
+msgstr ""
+
+#: patterns/hero-photo.php:42
+#: patterns/hero.php:42
+msgid "from 1,280 reviews. Insured, DBS-checked crews."
+msgstr ""
+
+#: patterns/hero-photo.php:49
+msgid "A cleaner mopping a long, bright stone corridor"
+msgstr ""
+
+#: patterns/hero-photo.php:53
+msgid "Corridor and lobby"
+msgstr ""
+
+#: patterns/hero-photo.php:53
+msgid "Done 06:40, before the first tenant"
+msgstr ""
+
 #: patterns/hero.php:3
 msgctxt "Pattern title"
 msgid "Hero with a job sheet"
@@ -914,34 +1030,6 @@ msgstr ""
 
 #: patterns/hero.php:20
 msgid "Booking for next week in Didsbury and Chorlton"
-msgstr ""
-
-#: patterns/hero.php:24
-msgid "A clean home, written up"
-msgstr ""
-
-#: patterns/hero.php:24
-msgid "line by line."
-msgstr ""
-
-#: patterns/hero.php:28
-msgid "Regular and deep cleans by the same vetted crew each visit. You get a job sheet with every room ticked off, and a clear price before we start."
-msgstr ""
-
-#: patterns/hero.php:33
-msgid "Book a clean"
-msgstr ""
-
-#: patterns/hero.php:37
-msgid "See prices"
-msgstr ""
-
-#: patterns/hero.php:42
-msgid "4.9 out of 5"
-msgstr ""
-
-#: patterns/hero.php:42
-msgid "from 1,280 reviews. Insured, DBS-checked crews."
 msgstr ""
 
 #: patterns/hero.php:49
@@ -983,7 +1071,7 @@ msgstr ""
 
 #: patterns/home.php:10
 msgctxt "Pattern description"
-msgid "A whole home page: hero, services, steps, prices, what is included, figures, reviews, questions and a call to action. Best on a page using the Landing page template."
+msgid "A whole home page: hero with a photo, services, about, steps, prices, what is included, figures, reviews, questions and a call to action. Best on a page using the Landing page template."
 msgstr ""
 
 #: patterns/included.php:3
@@ -1233,6 +1321,84 @@ msgstr ""
 msgid "Rated 4.9 out of 5 from 1,280 reviews. We reply to every one."
 msgstr ""
 
+#: patterns/services-photos.php:3
+msgctxt "Pattern title"
+msgid "Services with photos"
+msgstr ""
+
+#: patterns/services-photos.php:8
+msgctxt "Pattern description"
+msgid "Three service cards, each with a photo, a starting price, a short line and a link."
+msgstr ""
+
+#: patterns/services-photos.php:14
+msgid "A freshly made bed in a bright bedroom"
+msgstr ""
+
+#: patterns/services-photos.php:14
+#: patterns/services.php:14
+msgid "from £26/h"
+msgstr ""
+
+#: patterns/services-photos.php:14
+msgid "Homes"
+msgstr ""
+
+#: patterns/services-photos.php:14
+msgid "Weekly or fortnightly, the same crew each visit, with your own room checklist."
+msgstr ""
+
+#: patterns/services-photos.php:15
+msgid "Clean pans and cutlery drying in a kitchen rack"
+msgstr ""
+
+#: patterns/services-photos.php:15
+#: patterns/services.php:15
+msgid "from £180"
+msgstr ""
+
+#: patterns/services-photos.php:15
+msgid "Deep cleans"
+msgstr ""
+
+#: patterns/services-photos.php:15
+msgid "Inside the oven and cupboards, limescale and grout, every skirting board."
+msgstr ""
+
+#: patterns/services-photos.php:16
+msgid "An open-plan office with tidy desks and chairs"
+msgstr ""
+
+#: patterns/services-photos.php:16
+#: patterns/services.php:17
+msgid "from £24/h"
+msgstr ""
+
+#: patterns/services-photos.php:16
+msgid "Offices"
+msgstr ""
+
+#: patterns/services-photos.php:16
+#: patterns/services.php:17
+msgid "Before 08:00 or after 18:00, with a key-holding log your manager can read."
+msgstr ""
+
+#: patterns/services-photos.php:24
+msgid "Services"
+msgstr ""
+
+#: patterns/services-photos.php:28
+msgid "Homes, deep cleans and offices,"
+msgstr ""
+
+#: patterns/services-photos.php:28
+msgid "one crew."
+msgstr ""
+
+#: patterns/services-photos.php:33
+msgid "Products and equipment included. No call-out fee, no minimum contract."
+msgstr ""
+
 #: patterns/services.php:3
 msgctxt "Pattern title"
 msgid "Services with prices"
@@ -1251,20 +1417,12 @@ msgstr ""
 msgid "Weekly or fortnightly, the same crew each time, with your own checklist."
 msgstr ""
 
-#: patterns/services.php:14
-msgid "from £26/h"
-msgstr ""
-
 #: patterns/services.php:15
 msgid "Deep cleaning"
 msgstr ""
 
 #: patterns/services.php:15
 msgid "Inside the oven and cupboards, behind the sofa, every skirting board."
-msgstr ""
-
-#: patterns/services.php:15
-msgid "from £180"
 msgstr ""
 
 #: patterns/services.php:16
@@ -1281,14 +1439,6 @@ msgstr ""
 
 #: patterns/services.php:17
 msgid "Office cleaning"
-msgstr ""
-
-#: patterns/services.php:17
-msgid "Before 08:00 or after 18:00, with a key-holding log your manager can read."
-msgstr ""
-
-#: patterns/services.php:17
-msgid "from £24/h"
 msgstr ""
 
 #: patterns/services.php:18

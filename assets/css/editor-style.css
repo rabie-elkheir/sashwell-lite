@@ -102,6 +102,22 @@ body {
 	max-inline-size: 46rem;
 }
 
+/* The Sashwell pattern sections are as wide as the page, as on the site. */
+.wp-block.swl-sec,
+.wp-block.swl-hero,
+.wp-block.swl-cta,
+.swl-sec .wp-block,
+.swl-hero .wp-block,
+.swl-cta .wp-block {
+	max-inline-size: none;
+}
+
+/* "wrap" is also a wp-admin class; inside the patterns it is the content box of the site. */
+.swl-sec .wrap,
+.swl-hero .wrap {
+	margin-block: 0;
+}
+
 .wp-block[data-align="wide"] {
 	max-inline-size: 77.5rem;
 }
