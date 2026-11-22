@@ -1,0 +1,11 @@
+# Dependencies and build output
+/vendor/
+/node_modules/
+*.zip
+
+# Editor and system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

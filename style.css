@@ -1,0 +1,21 @@
+/*
+Theme Name: Sashwell Lite
+Theme URI: https://github.com/rabie-elkheir/sashwell-lite
+Author: Rabie Elkheir
+Author URI: https://themeforest.net/user/nile-theme
+Description: A calm, type-led theme for cleaning companies and other local service businesses. Clear header with a phone line, a side panel with contact details and the areas you cover, a call and WhatsApp bar on phones, light and dark mode, and a blog with a featured article, reading times and a contents list. Ten block patterns (hero, services, prices, how it works, figures, reviews, questions, call to action) and a Landing page template let you build a full home page with the block editor, no plugins needed. Everything is set under Appearance > Customize > Theme options.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sashwell-lite
+Tags: blog, one-column, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, footer-widgets, threaded-comments, translation-ready, block-patterns, wide-blocks, editor-style, rtl-language-support, sticky-post
+
+Sashwell Lite, (C) 2026 Rabie Elkheir.
+Sashwell Lite is distributed under the terms of the GNU GPL v2 or later.
+
+The theme's styles live in assets/css (style.css, blog.css, inner.css, offcanvas.css,
+wordpress.css, blocks.css, patterns.css). This file only holds the theme header.
+*/

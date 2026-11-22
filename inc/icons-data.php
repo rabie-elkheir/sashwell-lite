@@ -1,0 +1,51 @@
+<?php
+/**
+ * Icon data: name => array( viewBox, inner SVG markup ). 24px grid, 1.5px stroke, currentColor.
+ *
+ * @package Sashwell_Lite
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+return array(
+	'box'       => array( '0 0 24 24', '<path d="M4 8 12 4l8 4v8.5L12 20.5 4 16.5zM4 8l8 4 8-4M12 12v8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>' ),
+	'building'  => array( '0 0 24 24', '<path d="M5 20.5V4.5h9v16M14 9h5v11.5M3.5 20.5h17M8 8h3M8 11.5h3M8 15h3M16.5 12.5h.01M16.5 16h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'chat'      => array( '0 0 24 24', '<path d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1 0 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 9.2c.3 2.6 2.2 4.8 5.8 5.8l1-1.4-1.9-1-1 .8a4.6 4.6 0 0 1-2.2-2.2l.8-1-1-1.9z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>' ),
+	'clock'     => array( '0 0 24 24', '<path d="M3.5 12a8.5 8.5 0 1 0 17 0 8.5 8.5 0 1 0-17 0M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'download'  => array( '0 0 24 24', '<path d="M12 3.5v11M7.5 10l4.5 4.5 4.5-4.5M4.5 16.5v4h15v-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'drop'      => array( '0 0 24 24', '<path d="M12 3.5c3.5 4.4 5.5 7.6 5.5 10.2a5.5 5.5 0 0 1-11 0C6.5 11.1 8.5 7.9 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 14.2a2.6 2.6 0 0 0 2.4 2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>' ),
+	'hammer'    => array( '0 0 24 24', '<path d="M13.5 6.5 17 3l4 4-3.5 3.5M15 5l4 4M15.5 8.5 5 19a1.4 1.4 0 0 1-2-2L13.5 6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'home'      => array( '0 0 24 24', '<path d="M4 11 12 4.5l8 6.5M6 9.5V20h12V9.5M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'key'       => array( '0 0 24 24', '<path d="M5 15a4 4 0 1 0 8 0 4 4 0 1 0-8 0M12 12l7-7M16.5 7.5l2 2M14.5 9.5l1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'link'      => array( '0 0 24 24', '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1.2 1.2M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1.2-1.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'mail'      => array( '0 0 24 24', '<path d="M3.5 6h17v12h-17zM3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'phone'     => array( '0 0 24 24', '<path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>' ),
+	'print'     => array( '0 0 24 24', '<path d="M7 9V3.5h10V9M7 17H4.5V9h15v8H17M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16.5 11.5h.01" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>' ),
+	'sheet'     => array( '0 0 24 24', '<path d="M7 3.5h8l3 3V20.5H7zM15 3.5v3h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m9.5 11 1 1 2-2M9.5 16l1 1 2-2M14 11.5h2M14 16.5h2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'shield'    => array( '0 0 24 24', '<path d="M12 3.5 19 6v5.5c0 4.3-2.9 7.5-7 9-4.1-1.5-7-4.7-7-9V6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m9 12 2.2 2.2L15.5 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'sofa'      => array( '0 0 24 24', '<path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3.5 12.5a1.5 1.5 0 0 1 3 0V14h11v-1.5a1.5 1.5 0 0 1 3 0V18h-17zM6 18v1.5M18 18v1.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'spray'     => array( '0 0 24 24', '<path d="M9 7h4v3H9zM10 10v1.5M8.5 11.5h5l1 3V21H7.5v-6.5zM13 7l3-2M16 8h2M16 6l1.5-1M16 10l1.5 1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'squeegee'  => array( '0 0 24 24', '<path d="M4 9h16M6 9V7.5h12V9M12 9v11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 12.5c2 1 4 1 6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="1 2.5"/>' ),
+	'star'      => array( '0 0 24 24', '<path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1L3.2 9.4l6.1-.8z"/>' ),
+	'vacuum'    => array( '0 0 24 24', '<path d="M6 19a3 3 0 1 0 6 0 3 3 0 1 0-6 0M12 19h7M14.5 19V9.5a5.5 5.5 0 0 0-11 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'window'    => array( '0 0 24 24', '<path d="M5 3.5h14v17H5zM12 3.5v17M5 12h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m7.5 6.5 2 2M14.5 14.5l2 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>' ),
+	'chev'      => array( '0 0 12 8', '<path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6"/>' ),
+	'go'        => array( '0 0 16 16', '<path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'arrow'     => array( '0 0 16 16', '<path d="M2 8h11M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'search'    => array( '0 0 20 20', '<circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.7 12.7 17.5 17.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>' ),
+	'sun'       => array( '0 0 20 20', '<circle cx="10" cy="10" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 1.5v2.2M10 16.3v2.2M1.5 10h2.2M16.3 10h2.2M4 4l1.5 1.5M14.5 14.5 16 16M4 16l1.5-1.5M14.5 5.5 16 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>' ),
+	'moon'      => array( '0 0 20 20', '<path d="M16.5 12.6A7 7 0 0 1 7.4 3.5a7 7 0 1 0 9.1 9.1Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>' ),
+	'menu'      => array( '0 0 20 20', '<path d="M2 5h16M2 10h16M2 15h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>' ),
+	'close'     => array( '0 0 20 20', '<path d="M4.5 4.5l11 11M15.5 4.5l-11 11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>' ),
+	'umbrella'  => array( '0 0 24 24', '<path d="M4 12.2a8 8 0 0 1 16 0c-1.33-1.07-2.67-1.07-4 0-1.33-1.07-2.67-1.07-4 0-1.33-1.07-2.67-1.07-4 0-1.33-1.07-2.67-1.07-4 0Z" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 4V2.8M12 12.2v6.3a1.8 1.8 0 0 0 3.6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'id-check'  => array( '0 0 24 24', '<rect x="3" y="5" width="18" height="14" rx="3" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.5"/><circle cx="8.8" cy="10.6" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.8 15.8c.55-1.3 1.7-2 3-2s2.45.7 3 2M14 11.2l1.6 1.6 3-3.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'top'       => array( '0 0 24 24', '<path d="M12 19V5m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' ),
+	'call'      => array( '0 0 24 24', '<path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.6 3.5h2.6l1.4 4-2 1.4a11 11 0 0 0 6.5 6.5l1.4-2 4 1.4v2.6a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/>' ),
+	'instagram' => array( '0 0 24 24', '<path fill="currentColor" d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM16.3 2H7.7A5.7 5.7 0 0 0 2 7.7v8.6A5.7 5.7 0 0 0 7.7 22h8.6a5.7 5.7 0 0 0 5.7-5.7V7.7A5.7 5.7 0 0 0 16.3 2Zm4 14.3a4 4 0 0 1-4 4H7.7a4 4 0 0 1-4-4V7.7a4 4 0 0 1 4-4h8.6a4 4 0 0 1 4 4v8.6Z"/>' ),
+	'facebook'  => array( '0 0 24 24', '<path fill="currentColor" d="M13.5 21.5v-8h2.7l.4-3.2h-3.1V8.3c0-.9.3-1.5 1.6-1.5h1.7V4a22 22 0 0 0-2.5-.1c-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3v3.2h2.8v8h3.4Z"/>' ),
+	'linkedin'  => array( '0 0 24 24', '<path fill="currentColor" d="M6.9 8.8H3.6v11.6h3.3V8.8ZM5.3 3.6a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8Zm15.1 9.6c0-3.1-1.7-4.6-4-4.6a3.5 3.5 0 0 0-3.2 1.7V8.8H10v11.6h3.3v-5.9c0-1.6.6-2.8 2.1-2.8s1.8 1.3 1.8 2.9v5.8h3.3v-7.2Z"/>' ),
+	'whatsapp'  => array( '0 0 24 24', '<path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 5 5.2-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.9a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.1 8.1 0 1 1 12 20.1Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/>' ),
+	'x'         => array( '0 0 24 24', '<path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.3 4.7H5.4l11.3 14.5Z"/>' ),
+	'youtube'   => array( '0 0 24 24', '<path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"/>' ),
+	'tiktok'    => array( '0 0 24 24', '<path fill="currentColor" d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-1.8-2.5V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6Z"/>' ),
+);

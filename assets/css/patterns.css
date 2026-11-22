@@ -1,0 +1,1081 @@
+/*
+ * Sashwell Lite: block patterns.
+ *
+ * The patterns (patterns/*.php) are built from core blocks only. Each block carries a class
+ * from this file, so the sections keep the design when they are edited, moved or reused.
+ * Every value comes from the design tokens in style.css; dark mode follows the same tokens.
+ *
+ * Contents
+ * 1. Landing page template
+ * 2. Section frame: .swl-sec, .wrap, section head
+ * 3. Hero
+ * 4. Service rows
+ * 5. Steps
+ * 6. Prices
+ * 7. Figures
+ * 8. Included list and areas
+ * 9. Reviews
+ * 10. Questions
+ * 11. Call to action band
+ * 12. Phones
+ *
+ * Two of the pattern looks are also block styles for any block: "Ticked" on a List
+ * (.is-style-swl-ticks) and "Text link" on a Button (.is-style-swl-link).
+ */
+
+/* 1. Landing page template ------------------------------------------- */
+.swl-landing-content > * {
+	margin-block: 0;
+}
+
+/*
+ * Without a theme.json, WordPress wraps the content of each Group block in an extra
+ * .wp-block-group__inner-container. Inside the patterns it takes no box of its own, so the
+ * blocks it holds are laid out by the pattern's grid and flex rules; the selectors below
+ * match both the wrapped and the unwrapped markup.
+ */
+[class*="swl-"] .wp-block-group__inner-container {
+	display: contents;
+}
+
+/* In the block editor, the sections are as wide as the page, as on the site. */
+.wp-block:is(.swl-sec, .swl-hero, .swl-cta),
+[class*="swl-"] .wp-block {
+	max-inline-size: none;
+}
+
+.swl-sec .wrap,
+.swl-hero .wrap {
+	inline-size: 100%;
+	max-inline-size: calc(var(--container) + 2 * var(--gutter));
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+/* 2. Section frame ----------------------------------------------------- */
+.swl-sec {
+	--sec-bg: var(--surface);
+	padding-block: var(--sec);
+	background: var(--sec-bg);
+	color: var(--ink);
+}
+
+.swl-sec--mist {
+	--sec-bg: var(--mist);
+}
+
+.swl-sec--paper {
+	--sec-bg: var(--paper);
+}
+
+.swl-sec--ink {
+	--sec-bg: var(--ink-900);
+	--stone: #a9b6c4;
+	--line: #23405f;
+	color: #e8eef4;
+}
+
+[data-theme=dark] .swl-sec--ink {
+	--sec-bg: var(--d-sunk);
+}
+
+.swl-sec--ink :is(h2, h3, h4) {
+	color: #fff;
+}
+
+.swl-sec .wrap > *,
+.swl-sec .wrap > .wp-block-group__inner-container > * {
+	margin-block: 0;
+}
+
+.swl-sec .wrap > * + *,
+.swl-sec .wrap > .wp-block-group__inner-container > * + * {
+	margin-block-start: clamp(1.75rem, 1.5rem + 1vw, 2.875rem);
+}
+
+.swl-sec .eyebrow {
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+	margin-block: 0 1.25rem;
+	color: var(--stone);
+	font-size: var(--fs-micro);
+	font-weight: 600;
+	letter-spacing: var(--ls-caps, .12em);
+	text-transform: uppercase;
+}
+
+.swl-sec .eyebrow::before {
+	content: "";
+	flex: none;
+	inline-size: 2.5rem;
+	block-size: 1px;
+	background: var(--action-text);
+	opacity: .6;
+}
+
+.swl-sec--ink .eyebrow {
+	color: #c9d4df;
+}
+
+.swl-sec--ink .eyebrow::before {
+	background: var(--lemon);
+	opacity: 1;
+}
+
+.swl-sec .h2x {
+	max-inline-size: 18ch;
+	margin: 0;
+	font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.6rem);
+	line-height: 1.03;
+	letter-spacing: -.04em;
+	text-wrap: balance;
+}
+
+.swl-sec .soft {
+	color: #7b8896;
+}
+
+[data-theme=dark] .swl-sec .soft {
+	color: #7e8996;
+}
+
+.swl-sec--ink .soft {
+	color: #8fa2b7;
+}
+
+.swl-head {
+	display: grid;
+	gap: 1rem var(--gutter);
+	align-items: end;
+}
+
+:is(.swl-head, .swl-head > .wp-block-group__inner-container) > * {
+	margin: 0;
+}
+
+:is(.swl-head, .swl-head > .wp-block-group__inner-container) > p {
+	max-inline-size: 34rem;
+	color: var(--stone);
+}
+
+@media (min-width: 60em) {
+	.swl-head {
+		grid-template-columns: 7fr 5fr;
+	}
+
+	:is(.swl-head, .swl-head > .wp-block-group__inner-container) > p {
+		justify-self: end;
+	}
+}
+
+/* Buttons inside the patterns: pills, as everywhere in the design. */
+.swl-sec .wp-block-button__link,
+.swl-hero .wp-block-button__link {
+	border-radius: var(--r-pill);
+}
+
+.swl-sec .wp-block-buttons,
+.swl-hero .wp-block-buttons {
+	gap: .75rem 1.25rem;
+	align-items: center;
+}
+
+.swl-sec .is-style-outline .wp-block-button__link,
+.swl-hero .is-style-outline .wp-block-button__link {
+	border-width: 1.5px;
+}
+
+/* A text link with an arrow (core button, style "Link"). */
+:is(.swl-link, .is-style-swl-link) .wp-block-button__link,
+:is(.swl-link, .is-style-swl-link) .wp-block-button__link:hover {
+	padding: .5rem 0;
+	background: none;
+	color: var(--action-text);
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: .3em;
+	border: 0;
+}
+
+:is(.swl-link, .is-style-swl-link) .wp-block-button__link::after {
+	content: " \2192";
+}
+
+[dir=rtl] :is(.swl-link, .is-style-swl-link) .wp-block-button__link::after {
+	content: " \2190";
+}
+
+/* 3. Hero --------------------------------------------------------------- */
+.swl-hero {
+	padding: var(--space-3, 1rem) var(--gutter) 0;
+	background: var(--surface);
+}
+
+.swl-hero-panel {
+	position: relative;
+	overflow: hidden;
+	max-inline-size: calc(var(--container) + 6 * var(--gutter));
+	margin-inline: auto;
+	padding-block: clamp(3rem, 2rem + 5vw, 7rem);
+	border-radius: var(--r-frame, 28px);
+	background: var(--ink-900);
+	color: #e8eef4;
+}
+
+[data-theme=dark] .swl-hero-panel {
+	background: var(--d-sunk);
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.swl-hero-panel::after {
+	content: "";
+	position: absolute;
+	inset-block-end: -40%;
+	inset-inline-end: -10%;
+	inline-size: 60%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: radial-gradient(closest-side, #1f6feb33, transparent);
+	pointer-events: none;
+}
+
+.swl-hero-panel .wrap {
+	position: relative;
+	z-index: 1;
+}
+
+.swl-hero .wp-block-columns {
+	gap: clamp(2rem, 1rem + 3vw, 4rem);
+	align-items: center;
+	margin: 0;
+}
+
+.swl-hero-kicker {
+	display: inline-flex;
+	align-items: center;
+	gap: .6rem;
+	margin: 0 0 1.5rem;
+	padding: .35rem .9rem;
+	border: 1px solid #ffffff2e;
+	border-radius: var(--r-pill);
+	color: #c9d4df;
+	font-size: var(--fs-micro);
+	font-weight: 600;
+	letter-spacing: .04em;
+}
+
+.swl-hero-kicker::before {
+	content: "";
+	inline-size: .5rem;
+	block-size: .5rem;
+	border-radius: 50%;
+	background: var(--lemon);
+	box-shadow: 0 0 0 4px #e3f05a2e;
+}
+
+.swl-hero h1 {
+	margin: 0;
+	max-inline-size: 14ch;
+	color: #fff;
+	font-size: var(--fs-hero);
+	line-height: .98;
+	letter-spacing: -.045em;
+}
+
+.swl-hero h1 em {
+	position: relative;
+	isolation: isolate;
+	font-style: normal;
+	white-space: nowrap;
+}
+
+.swl-hero h1 em::after {
+	content: "";
+	position: absolute;
+	inset-inline: -.04em;
+	inset-block-end: -.08em;
+	block-size: .14em;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath fill='%23e3f05a' d='M0 8.6C18 3.2 70 1 97 1a4.5 4.5 0 0 1 0 9H3Q0 10 0 8.6Z'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
+	z-index: -1;
+}
+
+.swl-hero-lead {
+	max-inline-size: 34rem;
+	margin: 1.5rem 0 2rem;
+	color: #c9d4df;
+	font-size: var(--fs-lead);
+	line-height: 1.5;
+}
+
+.swl-hero .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+	background: var(--lemon);
+	color: #0b2239;
+}
+
+.swl-hero .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+	background: #fff;
+}
+
+.swl-hero .is-style-outline .wp-block-button__link,
+.swl-hero .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+	color: #fff;
+	border-color: #ffffff59;
+	background: none;
+}
+
+.swl-hero .is-style-outline .wp-block-button__link:hover {
+	border-color: #fff;
+}
+
+.swl-hero-proof {
+	margin: 2rem 0 0;
+	color: #a9b6c4;
+	font-size: var(--fs-small);
+}
+
+.swl-hero-proof strong {
+	color: #fff;
+}
+
+/* The job sheet card on the right of the hero. */
+.swl-sheet {
+	margin: 0;
+	padding: var(--p-card-l, 2rem);
+	border-radius: var(--r-card, 20px);
+	background: var(--surface);
+	color: var(--ink);
+	box-shadow: 0 30px 60px -20px #00000080;
+}
+
+[data-theme=dark] .swl-sheet {
+	background: var(--d-raise);
+	box-shadow: 0 0 0 1px var(--line), 0 30px 60px -20px #000000b3;
+}
+
+:is(.swl-sheet, .swl-sheet > .wp-block-group__inner-container) > * {
+	margin: 0;
+}
+
+.swl-sheet-top {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding-block-end: 1rem;
+	border-block-end: 1px solid var(--line);
+	font-size: var(--fs-micro);
+	letter-spacing: .04em;
+	color: var(--stone);
+}
+
+.swl-sheet-top strong {
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-size: 1rem;
+	letter-spacing: 0;
+}
+
+:is(.swl-ticks, .is-style-swl-ticks) {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+:is(.swl-ticks, .is-style-swl-ticks) li {
+	position: relative;
+	padding: .85rem 0 .85rem 2.1rem;
+	border-block-end: 1px solid var(--line);
+	line-height: 1.4;
+}
+
+[dir=rtl] :is(.swl-ticks, .is-style-swl-ticks) li {
+	padding: .85rem 2.1rem .85rem 0;
+}
+
+:is(.swl-ticks, .is-style-swl-ticks) li::before {
+	content: "";
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block-start: 1rem;
+	inline-size: 1.15rem;
+	block-size: 1.15rem;
+	border-radius: 6px;
+	background: var(--action) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+}
+
+.swl-sheet :is(.swl-ticks, .is-style-swl-ticks) li:last-child {
+	border-block-end: 0;
+}
+
+.swl-sheet-foot {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding-block-start: 1rem;
+	border-block-start: 1px solid var(--line);
+	font-size: var(--fs-small);
+	color: var(--stone);
+}
+
+.swl-sheet-foot strong {
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-size: 1.25rem;
+}
+
+/* 4. Service rows ---------------------------------------------------- */
+.swl-rows {
+	counter-reset: swl-row;
+	border-block-start: 1px solid var(--line);
+}
+
+.swl-row {
+	counter-increment: swl-row;
+	display: grid;
+	grid-template-columns: 3.5rem 1fr;
+	gap: .35rem 1rem;
+	padding-block: clamp(1.25rem, 1rem + 1vw, 2rem);
+	border-block-end: 1px solid var(--line);
+	transition: background var(--dur-2) var(--ease-out);
+}
+
+.swl-row::before {
+	content: counter(swl-row, decimal-leading-zero);
+	grid-row: span 3;
+	padding-block-start: .3rem;
+	color: var(--action-text);
+	font-family: var(--font-head);
+	font-size: var(--fs-micro);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: .06em;
+}
+
+:is(.swl-row, .swl-row > .wp-block-group__inner-container) > * {
+	margin: 0;
+}
+
+.swl-row h3 {
+	font-size: var(--t-h3);
+	line-height: 1.1;
+}
+
+.swl-row p {
+	max-inline-size: 38rem;
+	color: var(--stone);
+}
+
+.swl-row .swl-price {
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-weight: 700;
+	font-size: var(--t-num, 1.125rem);
+	font-variant-numeric: tabular-nums;
+}
+
+.swl-price small {
+	color: var(--stone);
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: var(--fs-micro);
+}
+
+@media (min-width: 60em) {
+	.swl-row {
+		grid-template-columns: 4rem 4fr 6fr 2fr;
+		align-items: baseline;
+	}
+
+	.swl-row::before {
+		grid-row: auto;
+	}
+
+	.swl-row .swl-price {
+		justify-self: end;
+		text-align: end;
+	}
+
+	.swl-row:hover {
+		background: linear-gradient(90deg, transparent, var(--mist) 20%, var(--mist) 80%, transparent);
+	}
+}
+
+/* 5. Steps ------------------------------------------------------------- */
+.swl-steps {
+	counter-reset: swl-step;
+	display: grid;
+	gap: var(--gutter);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+:is(.swl-steps, .swl-steps > .wp-block-group__inner-container) > .wp-block-group {
+	counter-increment: swl-step;
+	position: relative;
+	padding-block-start: 1.5rem;
+	border-block-start: 2px solid var(--ink);
+}
+
+.swl-sec--ink :is(.swl-steps, .swl-steps > .wp-block-group__inner-container) > .wp-block-group {
+	border-color: var(--lemon);
+}
+
+:is(.swl-steps, .swl-steps > .wp-block-group__inner-container) > .wp-block-group::before {
+	content: counter(swl-step, decimal-leading-zero);
+	display: block;
+	margin-block-end: 1rem;
+	color: var(--action-text);
+	font-family: var(--font-head);
+	font-size: var(--t-h3l);
+	font-weight: 700;
+	line-height: 1;
+	font-variant-numeric: tabular-nums;
+}
+
+.swl-sec--ink :is(.swl-steps, .swl-steps > .wp-block-group__inner-container) > .wp-block-group::before {
+	color: var(--lemon);
+}
+
+.swl-steps .wp-block-group > .wp-block-group__inner-container > *,
+.swl-steps .wp-block-group > * {
+	margin: 0;
+}
+
+.swl-steps h3 {
+	font-size: var(--t-h4, 1.3125rem);
+	line-height: 1.2;
+}
+
+.swl-steps .wp-block-group p {
+	margin-block-start: .5rem;
+	color: var(--stone);
+}
+
+.swl-steps .wp-block-group .swl-when {
+	margin-block-start: 1rem;
+	color: var(--ink);
+	font-size: var(--fs-micro);
+	font-weight: 600;
+	letter-spacing: var(--ls-caps, .12em);
+	text-transform: uppercase;
+}
+
+.swl-sec--ink .swl-steps .swl-when {
+	color: #fff;
+}
+
+@media (min-width: 48em) {
+	.swl-steps {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 64em) {
+	.swl-steps {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* 6. Prices -------------------------------------------------------------- */
+.swl-prices.wp-block-columns {
+	gap: var(--gutter);
+	margin: 0;
+}
+
+.swl-prices > .wp-block-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.swl-plan {
+	flex: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: var(--p-card-l, 2rem);
+	border: 1px solid var(--line);
+	border-radius: var(--r-card, 20px);
+	background: var(--surface);
+}
+
+[data-theme=dark] .swl-plan {
+	background: var(--d-raise);
+}
+
+:is(.swl-plan, .swl-plan > .wp-block-group__inner-container) > * {
+	margin: 0;
+}
+
+.swl-plan h3 {
+	font-size: var(--t-h4, 1.3125rem);
+}
+
+.swl-plan .swl-plan-for {
+	margin-block-start: .35rem;
+	color: var(--stone);
+	font-size: var(--fs-small);
+}
+
+.swl-plan .swl-plan-price {
+	margin-block: 1.5rem .25rem;
+	font-family: var(--font-head);
+	font-size: clamp(2.5rem, 2rem + 1.5vw, 3.25rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -.03em;
+	font-variant-numeric: tabular-nums;
+}
+
+.swl-plan .swl-plan-price small {
+	margin-inline-start: .25rem;
+	color: var(--stone);
+	font-family: var(--font-body);
+	font-size: var(--fs-small);
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+.swl-plan :is(.swl-ticks, .is-style-swl-ticks) {
+	margin-block: 1.5rem 2rem;
+	flex: 1;
+}
+
+.swl-plan :is(.swl-ticks, .is-style-swl-ticks) li {
+	padding-block: .6rem;
+	font-size: var(--fs-small);
+}
+
+.swl-plan :is(.swl-ticks, .is-style-swl-ticks) li::before {
+	inset-block-start: .75rem;
+}
+
+.swl-plan .wp-block-buttons {
+	margin-block-start: auto;
+}
+
+.swl-plan .wp-block-button,
+.swl-plan .wp-block-button__link {
+	inline-size: 100%;
+}
+
+.swl-plan--pick {
+	border-color: var(--ink-900);
+	background: var(--ink-900);
+	color: #e8eef4;
+	box-shadow: var(--shadow);
+}
+
+[data-theme=dark] .swl-plan--pick {
+	border-color: var(--action);
+	background: var(--d-high);
+}
+
+.swl-plan--pick h3,
+.swl-plan--pick .swl-plan-price {
+	color: #fff;
+}
+
+.swl-plan--pick :is(.swl-plan-for, .swl-plan-price small) {
+	color: #a9b6c4;
+}
+
+.swl-plan--pick :is(.swl-ticks, .is-style-swl-ticks) li {
+	border-color: #ffffff1f;
+}
+
+.swl-plan--pick .wp-block-button__link {
+	background: var(--lemon);
+	color: #0b2239;
+}
+
+.swl-plan--pick .wp-block-button__link:hover {
+	background: #fff;
+	color: #0b2239;
+}
+
+.swl-flag {
+	position: absolute;
+	inset-block-start: -.8rem;
+	inset-inline-end: 1.5rem;
+	margin: 0;
+	padding: .3rem .8rem;
+	border-radius: var(--r-pill);
+	background: var(--lemon);
+	color: #0b2239;
+	font-size: var(--fs-micro);
+	font-weight: 600;
+	letter-spacing: .04em;
+}
+
+.swl-note {
+	color: var(--stone);
+	font-size: var(--fs-small);
+}
+
+/* 7. Figures ------------------------------------------------------------- */
+.swl-stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem var(--gutter);
+}
+
+:is(.swl-stats, .swl-stats > .wp-block-group__inner-container) > .wp-block-group {
+	padding-block-start: 1.25rem;
+	border-block-start: 1px solid var(--line);
+}
+
+.swl-stats .wp-block-group > .wp-block-group__inner-container > *,
+.swl-stats .wp-block-group > * {
+	margin: 0;
+}
+
+.swl-stats .swl-n {
+	font-family: var(--font-head);
+	font-size: clamp(2.75rem, 2rem + 2.5vw, 4.5rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -.045em;
+	font-variant-numeric: tabular-nums;
+}
+
+.swl-stats .swl-n small {
+	margin-inline-start: .15em;
+	color: var(--action-text);
+	font-size: .4em;
+	letter-spacing: 0;
+}
+
+.swl-sec--ink .swl-stats .swl-n small {
+	color: var(--lemon);
+}
+
+.swl-stats .swl-l {
+	margin-block-start: .75rem;
+	max-inline-size: 18rem;
+	color: var(--stone);
+	font-size: var(--fs-small);
+}
+
+@media (min-width: 64em) {
+	.swl-stats {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* 8. Included list and areas ------------------------------------------- */
+.swl-split.wp-block-columns {
+	gap: var(--gutter);
+	margin: 0;
+}
+
+.swl-split .wp-block-column > * {
+	margin: 0;
+}
+
+.swl-split .wp-block-column > * + * {
+	margin-block-start: 1.25rem;
+}
+
+.swl-split :is(.swl-ticks, .is-style-swl-ticks) {
+	border-block-start: 1px solid var(--line);
+}
+
+@media (min-width: 48em) {
+	.swl-ticks--2 {
+		columns: 2;
+		column-gap: var(--gutter);
+	}
+
+	.swl-ticks--2 li {
+		break-inside: avoid;
+	}
+}
+
+.swl-areas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.swl-areas li {
+	display: inline-flex;
+	align-items: baseline;
+	gap: .5rem;
+	padding: .5rem 1rem;
+	border: 1px solid var(--line);
+	border-radius: var(--r-pill);
+	background: var(--surface);
+	font-weight: 600;
+	font-size: var(--fs-small);
+}
+
+[data-theme=dark] .swl-areas li {
+	background: var(--d-raise);
+}
+
+.swl-areas li em {
+	color: var(--stone);
+	font-style: normal;
+	font-weight: 400;
+	font-size: var(--fs-micro);
+	font-variant-numeric: tabular-nums;
+}
+
+/* 9. Reviews ------------------------------------------------------------- */
+.swl-quotes.wp-block-columns {
+	gap: var(--gutter);
+	margin: 0;
+}
+
+.swl-quotes .wp-block-quote {
+	display: flex;
+	flex-direction: column;
+	block-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.swl-quotes .wp-block-quote::before {
+	content: "\201C";
+	display: block;
+	block-size: 2.5rem;
+	color: var(--action-text);
+	font-family: var(--font-head);
+	font-size: 4.5rem;
+	line-height: 1;
+}
+
+.swl-quotes .wp-block-quote p {
+	flex: 1;
+	margin: 0;
+	font-family: var(--font-head);
+	font-size: var(--t-h3);
+	font-weight: 600;
+	line-height: 1.25;
+	letter-spacing: -.02em;
+	font-style: normal;
+}
+
+.swl-quotes .wp-block-quote cite {
+	display: block;
+	margin-block-start: 1.5rem;
+	padding-block-start: 1rem;
+	border-block-start: 1px solid var(--line);
+	color: var(--stone);
+	font-size: var(--fs-small);
+	font-style: normal;
+}
+
+.swl-quotes .wp-block-quote cite strong {
+	display: block;
+	color: var(--ink);
+	font-weight: 600;
+}
+
+/* 10. Questions ------------------------------------------------------------ */
+.swl-faq.wp-block-columns {
+	gap: var(--gutter);
+	margin: 0;
+}
+
+.swl-faq .wp-block-column > * {
+	margin: 0;
+}
+
+.swl-faq .wp-block-details {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-block-end: 1px solid var(--line);
+	border-radius: 0;
+	background: none;
+}
+
+.swl-faq .wp-block-details:first-of-type {
+	border-block-start: 1px solid var(--line);
+}
+
+.swl-faq .wp-block-details summary {
+	position: relative;
+	padding: 1.35rem 2.5rem 1.35rem 0;
+	font-family: var(--font-head);
+	font-size: var(--t-h4, 1.3125rem);
+	font-weight: 600;
+	line-height: 1.25;
+	list-style: none;
+	cursor: pointer;
+}
+
+[dir=rtl] .swl-faq .wp-block-details summary {
+	padding: 1.35rem 0 1.35rem 2.5rem;
+}
+
+.swl-faq .wp-block-details summary::-webkit-details-marker {
+	display: none;
+}
+
+.swl-faq .wp-block-details summary::after {
+	content: "";
+	position: absolute;
+	inset-inline-end: .25rem;
+	inset-block-start: 50%;
+	inline-size: 1.5rem;
+	block-size: 1.5rem;
+	margin-block-start: -.75rem;
+	border-radius: 50%;
+	background:
+		linear-gradient(currentColor, currentColor) center / .7rem 1.5px no-repeat,
+		linear-gradient(currentColor, currentColor) center / 1.5px .7rem no-repeat;
+	box-shadow: inset 0 0 0 1px var(--line);
+	transition: transform var(--dur-2) var(--ease-out);
+}
+
+.swl-faq .wp-block-details[open] summary::after {
+	transform: rotate(45deg);
+}
+
+.swl-faq .wp-block-details summary:hover {
+	color: var(--action-text);
+}
+
+.swl-faq .wp-block-details > :not(summary) {
+	max-inline-size: 40rem;
+	margin: 0 0 1.35rem;
+	color: var(--stone);
+}
+
+.swl-faq-side > * + * {
+	margin-block-start: 1.25rem !important;
+}
+
+.swl-faq-side p {
+	max-inline-size: 26rem;
+	color: var(--stone);
+}
+
+@media (min-width: 60em) {
+	.swl-faq .swl-faq-side {
+		position: sticky;
+		inset-block-start: 7rem;
+		align-self: flex-start;
+	}
+}
+
+/* 11. Call to action band ---------------------------------------------------- */
+.swl-cta {
+	padding: calc(var(--sec) * .66) var(--gutter);
+	background: var(--surface);
+}
+
+.swl-cta-panel {
+	position: relative;
+	overflow: hidden;
+	max-inline-size: calc(var(--container) + 2 * var(--gutter));
+	margin-inline: auto;
+	padding: clamp(2.5rem, 1.5rem + 4vw, 5rem) clamp(1.5rem, 1rem + 4vw, 5rem);
+	border-radius: var(--r-frame, 28px);
+	background: var(--action);
+	color: #fff;
+}
+
+[data-theme=dark] .swl-cta-panel {
+	background: var(--d-water);
+	box-shadow: inset 0 0 0 1px #6ea8ff40;
+}
+
+.swl-cta-panel::before {
+	content: "";
+	position: absolute;
+	inset-block-start: -50%;
+	inset-inline-end: -15%;
+	inline-size: 55%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: clamp(2rem, 1rem + 4vw, 5rem) solid #ffffff14;
+	pointer-events: none;
+}
+
+.swl-cta-panel .wp-block-columns {
+	position: relative;
+	gap: 2rem var(--gutter);
+	align-items: end;
+	margin: 0;
+}
+
+.swl-cta-panel .wp-block-column > * {
+	margin: 0;
+}
+
+.swl-cta-panel h2 {
+	max-inline-size: 16ch;
+	color: #fff;
+	font-size: clamp(2rem, 1.4rem + 2.4vw, 3.4rem);
+	line-height: 1.03;
+	letter-spacing: -.04em;
+}
+
+.swl-cta-panel h2 .soft {
+	color: #ffffffa6;
+}
+
+.swl-cta-panel .wp-block-column p {
+	margin-block-start: 1rem;
+	max-inline-size: 30rem;
+	color: #ffffffd9;
+}
+
+.swl-cta-panel .wp-block-buttons {
+	justify-content: flex-end;
+	gap: .75rem 1.25rem;
+	align-items: center;
+}
+
+.swl-cta-panel .wp-block-button__link {
+	border-radius: var(--r-pill);
+	min-block-size: 3.25rem;
+	padding-inline: 1.6rem;
+	background: var(--lemon);
+	color: #0b2239;
+}
+
+.swl-cta-panel .wp-block-button__link:hover {
+	background: #fff;
+	color: #0b2239;
+}
+
+.swl-cta-panel .is-style-outline .wp-block-button__link,
+.swl-cta-panel .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+	background: none;
+	color: #fff;
+	border: 1.5px solid #ffffff80;
+}
+
+.swl-cta-panel .is-style-outline .wp-block-button__link:hover {
+	background: none;
+	color: #fff;
+	border-color: #fff;
+}
+
+/* 12. Phones -------------------------------------------------------------- */
+@media (max-width: 47.99em) {
+	.swl-hero {
+		padding-inline: .5rem;
+	}
+
+	.swl-hero-panel {
+		border-radius: var(--r-card, 20px);
+	}
+
+	.swl-cta-panel .wp-block-buttons {
+		justify-content: flex-start;
+	}
+
+	.swl-row h3 {
+		font-size: var(--t-h4, 1.3125rem);
+	}
+}

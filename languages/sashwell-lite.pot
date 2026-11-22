@@ -1,0 +1,1608 @@
+# Copyright (C) 2026 Rabie Elkheir
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sashwell Lite 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sashwell-lite\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-22T21:01:26+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: sashwell-lite\n"
+
+#. Theme Name of the theme
+#: style.css:2
+msgid "Sashwell Lite"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css:3
+msgid "https://github.com/rabie-elkheir/sashwell-lite"
+msgstr ""
+
+#. Description of the theme
+#: style.css:6
+msgid "A calm, type-led theme for cleaning companies and other local service businesses. Clear header with a phone line, a side panel with contact details and the areas you cover, a call and WhatsApp bar on phones, light and dark mode, and a blog with a featured article, reading times and a contents list. Ten block patterns (hero, services, prices, how it works, figures, reviews, questions, call to action) and a Landing page template let you build a full home page with the block editor, no plugins needed. Everything is set under Appearance > Customize > Theme options."
+msgstr ""
+
+#. Author of the theme
+#: style.css:4
+msgid "Rabie Elkheir"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css:5
+msgid "https://themeforest.net/user/nile-theme"
+msgstr ""
+
+#: 404.php:24
+#: inc/template-functions.php:320
+msgid "Breadcrumb"
+msgstr ""
+
+#: 404.php:26
+#: inc/menus.php:26
+#: inc/template-functions.php:294
+msgid "Home"
+msgstr ""
+
+#: 404.php:27
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:45
+msgid "Back to the home page"
+msgstr ""
+
+#: 404.php:45
+#: template-parts/header.php:32
+#: template-parts/offcanvas.php:26
+msgid "Search the site"
+msgstr ""
+
+#: comments.php:18
+msgid "Comments"
+msgstr ""
+
+#. translators: %s: number of comments.
+#: comments.php:23
+#, php-format
+msgid "%s comment,"
+msgid_plural "%s comments,"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:24
+msgid "newest last."
+msgstr ""
+
+#: comments.php:26
+msgid "No comments yet,"
+msgstr ""
+
+#: comments.php:26
+msgid "ask the first question."
+msgstr ""
+
+#: comments.php:32
+msgid "Ask about your own home or job. Comments are read before they appear."
+msgstr ""
+
+#: comments.php:45
+msgid "Reply"
+msgstr ""
+
+#: comments.php:53
+msgid "Older comments"
+msgstr ""
+
+#: comments.php:54
+msgid "Newer comments"
+msgstr ""
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:70
+msgid "Leave a comment"
+msgstr ""
+
+#. translators: %s: name of the person being replied to.
+#: comments.php:72
+#, php-format
+msgid "Reply to %s"
+msgstr ""
+
+#: comments.php:75
+msgid "Your email is never shown."
+msgstr ""
+
+#. translators: %s: user display name.
+#: comments.php:78
+#, php-format
+msgid "Commenting as %s."
+msgstr ""
+
+#: comments.php:81
+msgid "Comment"
+msgstr ""
+
+#: comments.php:83
+msgid "Name"
+msgstr ""
+
+#: comments.php:84
+#: template-parts/offcanvas.php:64
+msgid "Email"
+msgstr ""
+
+#: comments.php:85
+msgid "Website"
+msgstr ""
+
+#: comments.php:85
+msgid "(optional)"
+msgstr ""
+
+#: comments.php:86
+msgid "Save my name and email in this browser for the next time I comment."
+msgstr ""
+
+#: comments.php:90
+msgid "Post comment"
+msgstr ""
+
+#: header.php:17
+msgid "Skip to content"
+msgstr ""
+
+#. translators: %d: minutes.
+#: inc/blog.php:56
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: author name.
+#: inc/blog.php:93
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#. translators: %d: number of articles by the author.
+#: inc/blog.php:128
+#, php-format
+msgid "%d article"
+msgid_plural "%d articles"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/blog.php:159
+#: template-parts/blog-index.php:46
+msgid "All articles"
+msgstr ""
+
+#: inc/blog.php:200
+msgid "Page"
+msgstr ""
+
+#: inc/blog.php:204
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first item, 2: last item, 3: total items.
+#: inc/blog.php:208
+#, php-format
+msgid "Showing <b>%1$s–%2$s</b> of %3$s"
+msgstr ""
+
+#: inc/blog.php:217
+msgid "Older articles"
+msgstr ""
+
+#: inc/blog.php:248
+#: template-parts/blog-index.php:54
+msgid "Articles"
+msgstr ""
+
+#: inc/blog.php:249
+#: template-parts/blog-index.php:60
+#: template-parts/blog-index.php:90
+msgid "Topics"
+msgstr ""
+
+#: inc/blog.php:252
+msgid "Avg. read"
+msgstr ""
+
+#: inc/blog.php:252
+#: patterns/stats.php:15
+msgid "min"
+msgstr ""
+
+#: inc/classes/class-sashwell-lite-walker-comment.php:59
+msgid "Writer"
+msgstr ""
+
+#: inc/classes/class-sashwell-lite-walker-comment.php:64
+msgid "Your comment is waiting for approval."
+msgstr ""
+
+#: inc/classes/class-sashwell-lite-walker-nav.php:189
+#: inc/classes/class-sashwell-lite-walker-offcanvas.php:86
+msgid "Soon"
+msgstr ""
+
+#: inc/customizer.php:64
+#: template-parts/utility.php:16
+msgid "Contact details"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "Phone number"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "As shown on the site, e.g. 0161 496 0732."
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Phone number for call links"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Optional. International form, e.g. +441614960732."
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Email address"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Address"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "Links to a map search."
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Opening hours"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "One line, e.g. Mon–Sat, 7:30–19:00."
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "WhatsApp number"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "International form without spaces, e.g. 447700900123."
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "WhatsApp first message"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "WhatsApp note"
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "Show the call and WhatsApp bar on phones"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "Header"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Logo without an uploaded image"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "Upload a logo under Site Identity. Without one, show the site name or the Sashwell wordmark."
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "Show the top bar (phone, email, note)"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Top bar note"
+msgstr ""
+
+#: inc/customizer.php:83
+#: inc/customizer.php:107
+msgid "Button text"
+msgstr ""
+
+#: inc/customizer.php:84
+#: inc/customizer.php:108
+msgid "Button link"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "The button shows when a link is set."
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Show the dark mode button"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Show the price card in big menus"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "Add the class \"mega\" to a top menu item to turn its dropdown into a big menu."
+msgstr ""
+
+#: inc/customizer.php:87
+msgid "Price card title"
+msgstr ""
+
+#: inc/customizer.php:88
+msgid "Price card text"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "Side panel"
+msgstr ""
+
+#: inc/customizer.php:94
+#: inc/customizer.php:147
+msgid "Heading"
+msgstr ""
+
+#: inc/customizer.php:95
+#: inc/customizer.php:106
+msgid "Heading, second part"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Areas title"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Areas"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "One per line: name | postcode, e.g. Didsbury | M20."
+msgstr ""
+
+#: inc/customizer.php:98
+msgid "Areas link"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "Proof line"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "Short line under the button. <b>bold</b> is allowed."
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Call to action heading"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "The dark band above the footer shows when this is set."
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "Phone label"
+msgstr ""
+
+#: inc/customizer.php:110
+msgid "About text"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Office hours line"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "Badges"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "One per line, e.g. Fully insured."
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Copyright line"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "Empty: © year and site name."
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "Animations, with a \"Reduce motion\" switch in the footer"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Social profiles"
+msgstr ""
+
+#: inc/customizer.php:129
+#: inc/template-functions.php:47
+msgid "Blog"
+msgstr ""
+
+#: inc/customizer.php:131
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer.php:132
+msgid "Show the newest article as a featured article"
+msgstr ""
+
+#: inc/customizer.php:133
+msgid "Featured heading"
+msgstr ""
+
+#: inc/customizer.php:134
+msgid "Featured heading, second part"
+msgstr ""
+
+#: inc/customizer.php:135
+msgid "Featured text"
+msgstr ""
+
+#: inc/customizer.php:136
+msgid "Archive heading"
+msgstr ""
+
+#: inc/customizer.php:137
+msgid "Archive heading, second part"
+msgstr ""
+
+#: inc/customizer.php:138
+msgid "Archive text"
+msgstr ""
+
+#: inc/customizer.php:139
+msgid "Show the title bar on pages and archives"
+msgstr ""
+
+#: inc/customizer.php:140
+msgid "Show breadcrumbs"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "404 page"
+msgstr ""
+
+#: inc/customizer.php:146
+msgid "Small line above the heading"
+msgstr ""
+
+#: inc/customizer.php:148
+msgid "Highlighted end of the heading"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "Text"
+msgstr ""
+
+#: inc/customizer.php:150
+msgid "Large background word"
+msgstr ""
+
+#: inc/customizer.php:164
+msgid "Site name"
+msgstr ""
+
+#: inc/customizer.php:165
+msgid "Sashwell wordmark"
+msgstr ""
+
+#: inc/customizer.php:166
+msgid "List with a sidebar"
+msgstr ""
+
+#: inc/customizer.php:167
+msgid "Grid of cards"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Theme options"
+msgstr ""
+
+#: inc/customizer.php:249
+msgid "Sashwell Pro"
+msgstr ""
+
+#: inc/customizer.php:250
+msgid "See the Pro version"
+msgstr ""
+
+#. translators: %s: the heading of a card list that scrolls sideways on phones.
+#: inc/enqueue.php:83
+#, php-format
+msgid "%s, swipe for more"
+msgstr ""
+
+#: inc/enqueue.php:84
+msgid "Cards"
+msgstr ""
+
+#: inc/enqueue.php:85
+msgid "Done:"
+msgstr ""
+
+#: inc/enqueue.php:86
+msgid "To do:"
+msgstr ""
+
+#. translators: 1: tasks done, 2: all tasks on the job sheet.
+#: inc/enqueue.php:88
+#, php-format
+msgid "%1$s of %2$s done"
+msgstr ""
+
+#: inc/menus.php:27
+msgid "Building"
+msgstr ""
+
+#: inc/menus.php:28
+msgid "Key"
+msgstr ""
+
+#: inc/menus.php:29
+msgid "Job sheet"
+msgstr ""
+
+#: inc/menus.php:30
+msgid "Drop"
+msgstr ""
+
+#: inc/menus.php:31
+msgid "Spray"
+msgstr ""
+
+#: inc/menus.php:32
+msgid "Vacuum"
+msgstr ""
+
+#: inc/menus.php:33
+msgid "Sofa"
+msgstr ""
+
+#: inc/menus.php:34
+msgid "Window"
+msgstr ""
+
+#: inc/menus.php:35
+msgid "Squeegee"
+msgstr ""
+
+#: inc/menus.php:36
+msgid "Hammer"
+msgstr ""
+
+#: inc/menus.php:37
+msgid "Box"
+msgstr ""
+
+#: inc/menus.php:38
+msgid "Shield"
+msgstr ""
+
+#: inc/menus.php:39
+msgid "Checked ID"
+msgstr ""
+
+#: inc/menus.php:40
+msgid "Umbrella"
+msgstr ""
+
+#: inc/menus.php:41
+msgid "Star"
+msgstr ""
+
+#: inc/menus.php:42
+msgid "Clock"
+msgstr ""
+
+#: inc/menus.php:43
+msgid "Chat"
+msgstr ""
+
+#: inc/menus.php:44
+msgid "Mail"
+msgstr ""
+
+#: inc/menus.php:45
+msgid "Phone"
+msgstr ""
+
+#: inc/menus.php:46
+msgid "Print"
+msgstr ""
+
+#: inc/menus.php:47
+msgid "Download"
+msgstr ""
+
+#: inc/menus.php:48
+msgid "Link"
+msgstr ""
+
+#: inc/options.php:27
+msgid "Replies within the hour"
+msgstr ""
+
+#: inc/options.php:36
+#: inc/options.php:62
+#: patterns/cta.php:30
+msgid "Get a quote"
+msgstr ""
+
+#: inc/options.php:39
+msgid "Get a price"
+msgstr ""
+
+#: inc/options.php:41
+msgid "Talk to a person,"
+msgstr ""
+
+#: inc/options.php:42
+msgid "not a form."
+msgstr ""
+
+#: inc/options.php:43
+msgid "Areas we cover"
+msgstr ""
+
+#: inc/options.php:49
+msgid "The latest article,"
+msgstr ""
+
+#: inc/options.php:50
+msgid "from the people who do the work."
+msgstr ""
+
+#: inc/options.php:52
+msgid "Every article so far,"
+msgstr ""
+
+#: inc/options.php:53
+msgid "newest first."
+msgstr ""
+
+#: inc/options.php:56
+msgid "This page has been tidied away."
+msgstr ""
+
+#: inc/options.php:58
+msgid "The address may have changed. Search the site or go back to the home page."
+msgstr ""
+
+#: inc/options.php:64
+msgid "Or call the office"
+msgstr ""
+
+#: inc/patterns.php:20
+msgid "Sashwell"
+msgstr ""
+
+#: inc/patterns.php:21
+msgid "Sections for a service business home page: hero, services, steps, prices, figures, reviews, questions and a call to action."
+msgstr ""
+
+#: inc/patterns.php:35
+msgid "Ticked"
+msgstr ""
+
+#: inc/patterns.php:42
+msgid "Text link"
+msgstr ""
+
+#: inc/setup.php:39
+msgid "Ink"
+msgstr ""
+
+#: inc/setup.php:44
+msgid "Blue"
+msgstr ""
+
+#: inc/setup.php:49
+msgid "Lemon"
+msgstr ""
+
+#: inc/setup.php:54
+msgid "Stone"
+msgstr ""
+
+#: inc/setup.php:59
+msgid "Mist"
+msgstr ""
+
+#: inc/setup.php:64
+msgid "Paper"
+msgstr ""
+
+#: inc/setup.php:69
+msgid "White"
+msgstr ""
+
+#: inc/setup.php:79
+msgid "Small"
+msgstr ""
+
+#: inc/setup.php:84
+msgid "Normal"
+msgstr ""
+
+#: inc/setup.php:89
+msgid "Lead"
+msgstr ""
+
+#: inc/setup.php:94
+msgid "Large"
+msgstr ""
+
+#: inc/setup.php:99
+msgid "Huge"
+msgstr ""
+
+#: inc/setup.php:108
+msgid "Main menu"
+msgstr ""
+
+#: inc/setup.php:109
+msgid "Side panel menu (uses the main menu when empty)"
+msgstr ""
+
+#: inc/setup.php:110
+msgid "Footer legal links"
+msgstr ""
+
+#: inc/setup.php:111
+msgid "404 page links (uses the main menu's top items when empty)"
+msgstr ""
+
+#: inc/setup.php:140
+msgid "Blog sidebar"
+msgstr ""
+
+#. translators: %d: footer column number.
+#: inc/setup.php:152
+#, php-format
+msgid "Footer column %d"
+msgstr ""
+
+#. translators: %s: search terms.
+#: inc/template-functions.php:50
+#, php-format
+msgid "Search results for &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: %s: site name.
+#: inc/template-functions.php:150
+#, php-format
+msgid "%s, home"
+msgstr ""
+
+#. Template Name of the theme
+#: page-templates/landing.php:3
+msgid "Landing page"
+msgstr ""
+
+#: patterns/cta.php:3
+msgctxt "Pattern title"
+msgid "Call to action"
+msgstr ""
+
+#: patterns/cta.php:8
+msgctxt "Pattern description"
+msgid "A blue rounded band with a two-part heading, a line of text and two buttons."
+msgstr ""
+
+#: patterns/cta.php:19
+msgid "Your first clean,"
+msgstr ""
+
+#: patterns/cta.php:19
+msgid "this week."
+msgstr ""
+
+#: patterns/cta.php:23
+msgid "Send the rooms and a day. A person replies with a fixed price, usually within the hour."
+msgstr ""
+
+#: patterns/cta.php:34
+msgid "Call 0161 496 0732"
+msgstr ""
+
+#: patterns/faq.php:3
+msgctxt "Pattern title"
+msgid "Questions"
+msgstr ""
+
+#: patterns/faq.php:8
+msgctxt "Pattern description"
+msgid "Questions that open and close, next to a heading and a contact link."
+msgstr ""
+
+#: patterns/faq.php:14
+msgid "Do I need to be at home?"
+msgstr ""
+
+#: patterns/faq.php:14
+msgid "No. Most customers leave a key or a code. Keys are logged out and back in, and never labelled with your address."
+msgstr ""
+
+#: patterns/faq.php:15
+msgid "Do you bring your own products?"
+msgstr ""
+
+#: patterns/faq.php:15
+msgid "Yes, and a vacuum and mop. If you prefer your own products, leave them out and we will use those."
+msgstr ""
+
+#: patterns/faq.php:16
+msgid "What if something is missed?"
+msgstr ""
+
+#: patterns/faq.php:16
+msgid "Tell us within 24 hours and the crew comes back to redo it, free. It happens on about one clean in sixty."
+msgstr ""
+
+#: patterns/faq.php:17
+msgid "Can I change or skip a visit?"
+msgstr ""
+
+#: patterns/faq.php:17
+msgid "Yes, with 48 hours notice and no fee. Shorter notice is charged at half the visit."
+msgstr ""
+
+#: patterns/faq.php:18
+msgid "Are you insured?"
+msgstr ""
+
+#: patterns/faq.php:18
+msgid "Public liability cover of £5 million, and every cleaner is DBS-checked and employed by us, not subcontracted."
+msgstr ""
+
+#: patterns/faq.php:26
+msgid "Questions"
+msgstr ""
+
+#: patterns/faq.php:30
+msgid "Asked every week,"
+msgstr ""
+
+#: patterns/faq.php:30
+msgid "answered once."
+msgstr ""
+
+#: patterns/faq.php:34
+msgid "Something else on your mind? The office answers the phone from 07:30."
+msgstr ""
+
+#: patterns/faq.php:39
+msgid "Ask a question"
+msgstr ""
+
+#: patterns/hero.php:3
+msgctxt "Pattern title"
+msgid "Hero with a job sheet"
+msgstr ""
+
+#: patterns/hero.php:8
+msgctxt "Pattern description"
+msgid "Dark framed hero with the page heading, two buttons, a proof line and a ticked job sheet."
+msgstr ""
+
+#: patterns/hero.php:20
+msgid "Booking for next week in Didsbury and Chorlton"
+msgstr ""
+
+#: patterns/hero.php:24
+msgid "A clean home, written up"
+msgstr ""
+
+#: patterns/hero.php:24
+msgid "line by line."
+msgstr ""
+
+#: patterns/hero.php:28
+msgid "Regular and deep cleans by the same vetted crew each visit. You get a job sheet with every room ticked off, and a clear price before we start."
+msgstr ""
+
+#: patterns/hero.php:33
+msgid "Book a clean"
+msgstr ""
+
+#: patterns/hero.php:37
+msgid "See prices"
+msgstr ""
+
+#: patterns/hero.php:42
+msgid "4.9 out of 5"
+msgstr ""
+
+#: patterns/hero.php:42
+msgid "from 1,280 reviews. Insured, DBS-checked crews."
+msgstr ""
+
+#: patterns/hero.php:49
+msgid "Flat 4, Lapwing Lane"
+msgstr ""
+
+#: patterns/hero.php:49
+msgid "Tue 09:00, 2 cleaners"
+msgstr ""
+
+#: patterns/hero.php:54
+msgid "Kitchen: hob, oven door, sink and taps"
+msgstr ""
+
+#: patterns/hero.php:58
+msgid "Bathroom: limescale off the screen"
+msgstr ""
+
+#: patterns/hero.php:62
+msgid "Bedrooms: beds changed, floors vacuumed"
+msgstr ""
+
+#: patterns/hero.php:66
+msgid "Living room: skirting boards and shelves"
+msgstr ""
+
+#: patterns/hero.php:71
+msgid "Done in 2 h 40 min"
+msgstr ""
+
+#: patterns/hero.php:71
+msgid "£78"
+msgstr ""
+
+#: patterns/home.php:3
+msgctxt "Pattern title"
+msgid "Home page"
+msgstr ""
+
+#: patterns/home.php:10
+msgctxt "Pattern description"
+msgid "A whole home page: hero, services, steps, prices, what is included, figures, reviews, questions and a call to action. Best on a page using the Landing page template."
+msgstr ""
+
+#: patterns/included.php:3
+msgctxt "Pattern title"
+msgid "What is included, and where"
+msgstr ""
+
+#: patterns/included.php:8
+msgctxt "Pattern description"
+msgid "A ticked list of what every clean covers, next to the areas served as postcode chips."
+msgstr ""
+
+#: patterns/included.php:14
+msgid "Kitchen worktops, hob and splashback"
+msgstr ""
+
+#: patterns/included.php:15
+msgid "Outside of cupboards and appliances"
+msgstr ""
+
+#: patterns/included.php:16
+msgid "Sinks, taps and plugholes"
+msgstr ""
+
+#: patterns/included.php:17
+msgid "Bath, shower and limescale on glass"
+msgstr ""
+
+#: patterns/included.php:18
+msgid "Toilets, inside and out"
+msgstr ""
+
+#: patterns/included.php:19
+msgid "Mirrors and glass surfaces"
+msgstr ""
+
+#: patterns/included.php:20
+msgid "Dusting to door-frame height"
+msgstr ""
+
+#: patterns/included.php:21
+msgid "Skirting boards and light switches"
+msgstr ""
+
+#: patterns/included.php:22
+msgid "Vacuuming and mopping every floor"
+msgstr ""
+
+#: patterns/included.php:23
+msgid "Bins emptied and relined"
+msgstr ""
+
+#: patterns/included.php:41
+msgid "Every regular clean"
+msgstr ""
+
+#: patterns/included.php:45
+msgid "Ten lines,"
+msgstr ""
+
+#: patterns/included.php:45
+msgid "ticked every visit."
+msgstr ""
+
+#: patterns/included.php:61
+msgid "Where we work"
+msgstr ""
+
+#: patterns/included.php:65
+msgid "South Manchester and Trafford, within 25 minutes of the office."
+msgstr ""
+
+#: patterns/included.php:80
+msgid "Ask about your street"
+msgstr ""
+
+#: patterns/prices.php:3
+msgctxt "Pattern title"
+msgid "Price plans"
+msgstr ""
+
+#: patterns/prices.php:8
+msgctxt "Pattern description"
+msgid "Three price cards, the middle one marked as the most booked."
+msgstr ""
+
+#: patterns/prices.php:15
+msgid "One-off"
+msgstr ""
+
+#: patterns/prices.php:16
+msgid "Before guests, after a party"
+msgstr ""
+
+#: patterns/prices.php:17
+msgid "£29"
+msgstr ""
+
+#: patterns/prices.php:18
+#: patterns/prices.php:26
+msgid "per hour"
+msgstr ""
+
+#: patterns/prices.php:19
+msgid "Minimum three hours"
+msgstr ""
+
+#: patterns/prices.php:19
+msgid "Products and equipment included"
+msgstr ""
+
+#: patterns/prices.php:19
+msgid "Job sheet after the clean"
+msgstr ""
+
+#: patterns/prices.php:23
+msgid "Fortnightly"
+msgstr ""
+
+#: patterns/prices.php:24
+msgid "Most homes with two to three bedrooms"
+msgstr ""
+
+#: patterns/prices.php:25
+msgid "£26"
+msgstr ""
+
+#: patterns/prices.php:27
+msgid "The same crew every visit"
+msgstr ""
+
+#: patterns/prices.php:27
+msgid "Your own room checklist"
+msgstr ""
+
+#: patterns/prices.php:27
+msgid "Skip a visit with 48 hours notice"
+msgstr ""
+
+#: patterns/prices.php:27
+msgid "Free re-clean within 24 hours"
+msgstr ""
+
+#: patterns/prices.php:31
+msgid "Deep clean"
+msgstr ""
+
+#: patterns/prices.php:32
+msgid "Spring cleans and moving out"
+msgstr ""
+
+#: patterns/prices.php:33
+msgid "£180"
+msgstr ""
+
+#: patterns/prices.php:34
+msgid "starting price"
+msgstr ""
+
+#: patterns/prices.php:35
+msgid "Oven, fridge and cupboards inside"
+msgstr ""
+
+#: patterns/prices.php:35
+msgid "Limescale and grout"
+msgstr ""
+
+#: patterns/prices.php:35
+msgid "Fixed price before we start"
+msgstr ""
+
+#: patterns/prices.php:45
+msgid "Prices"
+msgstr ""
+
+#: patterns/prices.php:49
+msgid "Clear prices."
+msgstr ""
+
+#: patterns/prices.php:49
+msgid "No call-out fee."
+msgstr ""
+
+#: patterns/prices.php:54
+msgid "You pay for the hours on the job sheet, never more than the quote."
+msgstr ""
+
+#: patterns/prices.php:70
+msgid "Most booked"
+msgstr ""
+
+#: patterns/prices.php:97
+msgid "Book this"
+msgstr ""
+
+#: patterns/prices.php:105
+msgid "Prices for Greater Manchester. Weekends add £4 an hour."
+msgstr ""
+
+#: patterns/reviews.php:3
+msgctxt "Pattern title"
+msgid "Reviews"
+msgstr ""
+
+#: patterns/reviews.php:8
+msgctxt "Pattern description"
+msgid "Three short reviews with the name, the place and what was cleaned."
+msgstr ""
+
+#: patterns/reviews.php:14
+msgid "They found the limescale I had stopped seeing. The job sheet said where, and it has stayed gone."
+msgstr ""
+
+#: patterns/reviews.php:14
+msgid "Didsbury, fortnightly clean"
+msgstr ""
+
+#: patterns/reviews.php:15
+msgid "The agent returned the full deposit. The checklist matched the inventory line for line."
+msgstr ""
+
+#: patterns/reviews.php:15
+msgid "Chorlton, end of tenancy"
+msgstr ""
+
+#: patterns/reviews.php:16
+msgid "Same two people every Tuesday for three years. They know which plants not to move."
+msgstr ""
+
+#: patterns/reviews.php:16
+msgid "Sale, weekly clean"
+msgstr ""
+
+#: patterns/reviews.php:24
+msgid "Reviews"
+msgstr ""
+
+#: patterns/reviews.php:28
+msgid "What neighbours say,"
+msgstr ""
+
+#: patterns/reviews.php:28
+msgid "in their words."
+msgstr ""
+
+#: patterns/reviews.php:33
+msgid "Rated 4.9 out of 5 from 1,280 reviews. We reply to every one."
+msgstr ""
+
+#: patterns/services.php:3
+msgctxt "Pattern title"
+msgid "Services with prices"
+msgstr ""
+
+#: patterns/services.php:8
+msgctxt "Pattern description"
+msgid "Numbered service rows on hairlines, each with a short line and a starting price."
+msgstr ""
+
+#: patterns/services.php:14
+msgid "Regular cleaning"
+msgstr ""
+
+#: patterns/services.php:14
+msgid "Weekly or fortnightly, the same crew each time, with your own checklist."
+msgstr ""
+
+#: patterns/services.php:14
+msgid "from £26/h"
+msgstr ""
+
+#: patterns/services.php:15
+msgid "Deep cleaning"
+msgstr ""
+
+#: patterns/services.php:15
+msgid "Inside the oven and cupboards, behind the sofa, every skirting board."
+msgstr ""
+
+#: patterns/services.php:15
+msgid "from £180"
+msgstr ""
+
+#: patterns/services.php:16
+msgid "End of tenancy"
+msgstr ""
+
+#: patterns/services.php:16
+msgid "Done to the inventory, with a free re-clean if the agent asks within 72 hours."
+msgstr ""
+
+#: patterns/services.php:16
+msgid "from £220"
+msgstr ""
+
+#: patterns/services.php:17
+msgid "Office cleaning"
+msgstr ""
+
+#: patterns/services.php:17
+msgid "Before 08:00 or after 18:00, with a key-holding log your manager can read."
+msgstr ""
+
+#: patterns/services.php:17
+msgid "from £24/h"
+msgstr ""
+
+#: patterns/services.php:18
+msgid "Carpets and upholstery"
+msgstr ""
+
+#: patterns/services.php:18
+msgid "Hot-water extraction, dry to walk on in about four hours."
+msgstr ""
+
+#: patterns/services.php:18
+msgid "from £45"
+msgstr ""
+
+#: patterns/services.php:26
+msgid "What we clean"
+msgstr ""
+
+#: patterns/services.php:30
+msgid "Five services,"
+msgstr ""
+
+#: patterns/services.php:30
+msgid "one standard."
+msgstr ""
+
+#: patterns/services.php:35
+msgid "Prices include products and equipment. No call-out fee, no minimum contract."
+msgstr ""
+
+#: patterns/stats.php:3
+msgctxt "Pattern title"
+msgid "Figures"
+msgstr ""
+
+#: patterns/stats.php:8
+msgctxt "Pattern description"
+msgid "Four large figures with a one-line label each, on a light grey band."
+msgstr ""
+
+#: patterns/stats.php:14
+msgid "cleans written up since 2014"
+msgstr ""
+
+#: patterns/stats.php:15
+msgid "average reply time to a quote request"
+msgstr ""
+
+#: patterns/stats.php:16
+msgid "/5"
+msgstr ""
+
+#: patterns/stats.php:16
+msgid "from 1,280 reviews on two sites"
+msgstr ""
+
+#: patterns/stats.php:17
+msgid "%"
+msgstr ""
+
+#: patterns/stats.php:17
+msgid "of customers keep the same crew for a year"
+msgstr ""
+
+#: patterns/stats.php:25
+msgid "On the record"
+msgstr ""
+
+#: patterns/stats.php:29
+msgid "Twelve years of job sheets,"
+msgstr ""
+
+#: patterns/stats.php:29
+msgid "counted."
+msgstr ""
+
+#: patterns/stats.php:34
+msgid "Figures from our own booking records, updated every quarter."
+msgstr ""
+
+#: patterns/steps.php:3
+msgctxt "Pattern title"
+msgid "How it works"
+msgstr ""
+
+#: patterns/steps.php:8
+msgctxt "Pattern description"
+msgid "Four numbered steps on a dark band, each with a time line."
+msgstr ""
+
+#: patterns/steps.php:14
+msgid "Tell us about the place"
+msgstr ""
+
+#: patterns/steps.php:14
+msgid "Rooms, pets, the bits that bother you. Two minutes online or on the phone."
+msgstr ""
+
+#: patterns/steps.php:14
+msgid "Today"
+msgstr ""
+
+#: patterns/steps.php:15
+msgid "Get a fixed price"
+msgstr ""
+
+#: patterns/steps.php:15
+msgid "A written quote with the hours and the crew, before anything is booked."
+msgstr ""
+
+#: patterns/steps.php:15
+msgid "Within the hour"
+msgstr ""
+
+#: patterns/steps.php:16
+msgid "Meet your crew"
+msgstr ""
+
+#: patterns/steps.php:16
+msgid "The same two people each visit, with photo ID and a key log."
+msgstr ""
+
+#: patterns/steps.php:16
+msgid "First visit"
+msgstr ""
+
+#: patterns/steps.php:17
+msgid "Read the job sheet"
+msgstr ""
+
+#: patterns/steps.php:17
+msgid "Every room ticked off, with notes. Anything missed is redone free."
+msgstr ""
+
+#: patterns/steps.php:17
+msgid "After each clean"
+msgstr ""
+
+#: patterns/steps.php:25
+msgid "How it works"
+msgstr ""
+
+#: patterns/steps.php:29
+msgid "Four steps,"
+msgstr ""
+
+#: patterns/steps.php:29
+msgid "no surprises."
+msgstr ""
+
+#: patterns/steps.php:34
+msgid "From the first message to the first clean usually takes three days."
+msgstr ""
+
+#: searchform.php:20
+msgid "Search pages and articles"
+msgstr ""
+
+#: searchform.php:21
+msgid "Search services, prices, help…"
+msgstr ""
+
+#: searchform.php:23
+msgid "Close search"
+msgstr ""
+
+#: searchform.php:29
+msgid "Search articles"
+msgstr ""
+
+#: searchform.php:32
+msgid "Search the articles…"
+msgstr ""
+
+#: searchform.php:41
+#: searchform.php:43
+#: template-parts/search.php:14
+msgid "Search"
+msgstr ""
+
+#: template-parts/blog-index.php:25
+msgid "Latest"
+msgstr ""
+
+#: template-parts/blog-index.php:54
+msgid "Results"
+msgstr ""
+
+#: template-parts/blog-index.php:87
+msgid "Search and topics"
+msgstr ""
+
+#: template-parts/content-none.php:11
+msgid "Nothing matches that."
+msgstr ""
+
+#: template-parts/content-none.php:11
+msgid "Try a shorter word or another topic."
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing here yet."
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "New articles appear here as soon as they are published."
+msgstr ""
+
+#: template-parts/dock.php:15
+msgid "Quick contact"
+msgstr ""
+
+#: template-parts/dock.php:18
+msgid "Call"
+msgstr ""
+
+#: template-parts/footer.php:108
+msgid "Reduce motion"
+msgstr ""
+
+#: template-parts/footer.php:113
+msgid "Follow us"
+msgstr ""
+
+#: template-parts/footer.php:120
+msgid "Back to top"
+msgstr ""
+
+#: template-parts/header.php:16
+msgid "Main"
+msgstr ""
+
+#: template-parts/header.php:34
+#: template-parts/offcanvas.php:28
+msgid "Dark mode"
+msgstr ""
+
+#: template-parts/header.php:40
+#: template-parts/offcanvas.php:22
+msgid "Menu and contact details"
+msgstr ""
+
+#: template-parts/offcanvas.php:30
+msgid "Close menu"
+msgstr ""
+
+#: template-parts/offcanvas.php:34
+msgid "Mobile"
+msgstr ""
+
+#: template-parts/offcanvas.php:67
+msgid "Visit"
+msgstr ""
+
+#: template-parts/offcanvas.php:84
+msgid "Check your ZIP code"
+msgstr ""
+
+#: template-parts/post-feature.php:22
+msgid "Featured"
+msgstr ""
+
+#: template-parts/post-feature.php:33
+msgid "In this piece"
+msgstr ""
+
+#: template-parts/post-feature.php:43
+msgid "Read the article"
+msgstr ""
+
+#. translators: %s: phone number link.
+#: template-parts/search.php:22
+#, php-format
+msgid "Can't find it? Call %s."
+msgstr ""
+
+#: template-parts/single-post.php:54
+msgid "Contents and booking"
+msgstr ""
+
+#: template-parts/single-post.php:57
+msgid "In this article"
+msgstr ""
+
+#: template-parts/single-post.php:84
+msgid "Article pages"
+msgstr ""
+
+#: template-parts/single-post.php:84
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/single-post.php:91
+msgid "Filed under"
+msgstr ""
+
+#: template-parts/single-post.php:99
+msgid "Written by"
+msgstr ""
+
+#. translators: %s: author name.
+#: template-parts/single-post.php:105
+#, php-format
+msgid "All articles by %s"
+msgstr ""
+
+#: template-parts/single-post.php:113
+msgid "More articles"
+msgstr ""
+
+#: template-parts/single-post.php:115
+msgid "Previous article"
+msgstr ""
+
+#: template-parts/single-post.php:118
+msgid "Next article"
+msgstr ""

@@ -1,0 +1,195 @@
+/*
+ * Sashwell: block editor styles.
+ *
+ * Loaded with add_editor_style() together with blocks.css, so posts and pages
+ * look in the editor as they do on the site: the self-hosted fonts, the design
+ * tokens, the article text and its column width. WordPress scopes these rules
+ * to the editor canvas.
+ */
+
+@font-face {
+	font-family: "Bricolage Grotesque";
+	font-weight: 600;
+	font-display: swap;
+	src: url(../fonts/bricolage-grotesque-latin-600-normal.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Bricolage Grotesque";
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/bricolage-grotesque-latin-700-normal.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Figtree";
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/figtree-latin-400-normal.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Figtree";
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/figtree-latin-400-italic.woff2) format("woff2");
+}
+
+@font-face {
+	font-family: "Figtree";
+	font-weight: 600;
+	font-display: swap;
+	src: url(../fonts/figtree-latin-600-normal.woff2) format("woff2");
+}
+
+:root {
+	--ink: #0e2a47;
+	--ink-2: #284562;
+	--action: #1f6feb;
+	--action-hover: #185cc8;
+	--action-text: #1a5fd0;
+	--paper: #f4f6f8;
+	--surface: #fff;
+	--stone: #56606b;
+	--line: #d9dee3;
+	--mist: #eef3f7;
+	--lemon: #e3f05a;
+	--on-action: #fff;
+	--font-head: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+	--font-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+	--fs-body: 1.0625rem;
+	--fs-small: .9375rem;
+	--fs-micro: .8125rem;
+	--t-h3: clamp(1.4rem, 1.1rem + .8vw, 1.75rem);
+	--t-h4: 1.3125rem;
+	--space-4: 1.5rem;
+	--space-5: 2rem;
+	--radius: 6px;
+	--r-md: 10px;
+	--r-lg: 16px;
+	--r-pill: 999px;
+	--target: 44px;
+	/* Tokens the block patterns use (assets/css/patterns.css). */
+	--ink-900: #0b2239;
+	--stone-2: #6f7b88;
+	--container: 77.5rem;
+	--gutter: clamp(1.25rem, .6rem + 2.6vw, 3rem);
+	--sec: clamp(3.5rem, 2rem + 4vw, 6rem);
+	--fs-hero: clamp(2.5rem, 1.55rem + 4.1vw, 5rem);
+	--fs-lead: clamp(1.125rem, 1.05rem + .35vw, 1.3125rem);
+	--ls-caps: .12em;
+	--space-3: 1rem;
+	--p-card-l: 2rem;
+	--r-card: 20px;
+	--r-frame: 28px;
+	--t-h3l: clamp(1.75rem, 1.2rem + 1.4vw, 2.25rem);
+	--t-num: 1.125rem;
+	--dur-2: .24s;
+	--ease-out: cubic-bezier(.2, .8, .2, 1);
+	--shadow: 0 1px 2px #0e2a470f, 0 8px 24px -6px #0e2a471f, 0 24px 48px -12px #0e2a4724;
+}
+
+body {
+	background: #fff;
+	color: var(--ink);
+	font: 400 var(--fs-body)/1.6 var(--font-body);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Text column: the article width on the site (46rem), wide and full as on the site. */
+.wp-block {
+	max-inline-size: 46rem;
+}
+
+.wp-block[data-align="wide"] {
+	max-inline-size: 77.5rem;
+}
+
+.wp-block[data-align="full"] {
+	max-inline-size: none;
+}
+
+.editor-post-title__input,
+.wp-block-post-title {
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-size: clamp(2.25rem, 1.6rem + 2.8vw, 3.5rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--ink);
+	font-family: var(--font-head);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -.02em;
+	text-wrap: balance;
+}
+
+h1 {
+	font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+h2 {
+	margin-block-start: 2em;
+	font-size: var(--t-h3);
+	letter-spacing: -.025em;
+}
+
+h3 {
+	font-size: var(--t-h4);
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+h5,
+h6 {
+	font-size: 1rem;
+}
+
+p {
+	color: var(--ink-2);
+}
+
+a {
+	color: var(--action-text);
+	text-decoration-thickness: 1px;
+	text-underline-offset: .18em;
+}
+
+ul,
+ol {
+	padding-inline-start: 1.5em;
+}
+
+li + li {
+	margin-block-start: .35em;
+}
+
+strong,
+b {
+	font-weight: 600;
+}
+
+code,
+kbd {
+	padding: .1em .35em;
+	border-radius: 4px;
+	background: var(--mist);
+	font-size: .9em;
+}
+
+pre code {
+	padding: 0;
+	background: none;
+}

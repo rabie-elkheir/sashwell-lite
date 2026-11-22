@@ -1,0 +1,539 @@
+/*
+ * Sashwell Lite: WordPress integration styles.
+ *
+ * What WordPress adds on top of the design: the uploaded logo, the site-name logo,
+ * widgets, core classes and editor content. It uses the design tokens from style.css.
+ *
+ * Contents
+ * 1. Logo
+ * 2. Footer widgets
+ * 3. WordPress core classes
+ * 4. Blog topic links
+ * 5. Menu options (badges, mega menu columns)
+ * 6. Post, page and comment content (Theme Unit Test)
+ * 7. Side panel polish
+ * 8. Form fields: soft focus
+ * 9. Simple footer
+ * 10. Password form
+ */
+
+/* 1. Logo ------------------------------------------------------------ */
+.brand .logo-img {
+	display: block;
+	inline-size: auto;
+	max-inline-size: 12rem;
+	object-fit: contain;
+}
+
+.brand-name {
+	font-family: var(--font-head);
+	font-size: var(--t-h4, 1.3125rem);
+	font-weight: 700;
+	letter-spacing: -.02em;
+	color: inherit;
+}
+
+.footer .brand,
+.footer .brand-name {
+	color: #fff;
+}
+
+/* 2. Footer widgets -------------------------------------------------- */
+.footer-grid .widget + .widget {
+	margin-block-start: 1.75rem;
+}
+
+.footer-grid .widget ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* 3. WordPress core classes ----------------------------------------- */
+.screen-reader-text {
+	position: absolute !important;
+	inline-size: 1px;
+	block-size: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.alignleft {
+	float: inline-start;
+	margin-inline-end: var(--space-2);
+}
+
+.alignright {
+	float: inline-end;
+	margin-inline-start: var(--space-2);
+}
+
+.aligncenter {
+	display: block;
+	margin-inline: auto;
+}
+
+.wp-caption-text,
+.wp-element-caption {
+	font-size: var(--fs-small, .9375rem);
+	color: var(--stone, #56606b);
+}
+
+/* 4. Blog topic links ------------------------------------------------
+ * The design filters topics with buttons (aria-pressed). In WordPress they are
+ * links to the category archives, marked with aria-current; same look.
+ */
+a.btopic,
+a.bchip {
+	text-decoration: none;
+}
+
+.btopic[aria-current] {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+.btopic[aria-current]::before {
+	transform: scaleX(1);
+}
+
+.btopic[aria-current] b {
+	background: var(--ink-900);
+	color: #fff;
+}
+
+.bchip[aria-current] {
+	background: var(--ink-900);
+	color: #fff;
+}
+
+.bchip[aria-current] b {
+	color: var(--lemon);
+}
+
+[data-theme="dark"] .btopic[aria-current] b,
+[data-theme="dark"] .bchip[aria-current] {
+	color: #0e2a47;
+	background: #e8eef4;
+	border-color: #e8eef4;
+}
+
+[data-theme="dark"] .bchip[aria-current] b {
+	color: #0e2a47;
+}
+
+/* 5. Menu options (inc/menus.php) ------------------------------------ */
+/* Badge on a dropdown link: the design's "soon" pill, in the arrow's place. */
+.mi-badge,
+.oc-badge {
+	font-style: normal;
+	font-size: .625rem;
+	font-weight: 600;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	line-height: 1.4;
+	padding: .1rem .4rem;
+	border-radius: 999px;
+	white-space: nowrap;
+}
+
+.mi-badge {
+	color: #e8eef4;
+	background: #0b2239;
+}
+
+.oc-badge {
+	margin-inline-start: .6rem;
+	color: var(--action-text);
+	border: 1px solid currentColor;
+}
+
+/* Sub-items of a dropdown link (no fly-outs in the design): listed under their parent, stepped in. */
+.sub li.mi-lv2 { margin-inline-start: 1.25rem; }
+.sub li.mi-lv3 { margin-inline-start: 2.5rem; }
+.sub li.mi-lv4 { margin-inline-start: 3.75rem; }
+
+/* Mega menu with one, three or four columns, or without the card (the design: two columns + card). */
+.sub--mega.sub--c1 { grid-template-columns: 1fr 1.05fr; }
+.sub--mega.sub--c3 { grid-template-columns: 1fr 1fr 1fr 1.05fr; }
+.sub--mega.sub--c4 { grid-template-columns: repeat(4, 1fr) 1.05fr; }
+.sub--mega.sub--nocard { grid-template-columns: 1fr 1fr; }
+.sub--mega.sub--nocard.sub--c1 { inset-inline-end: auto; min-inline-size: 20rem; grid-template-columns: 1fr; }
+.sub--mega.sub--nocard.sub--c3 { grid-template-columns: repeat(3, 1fr); }
+.sub--mega.sub--nocard.sub--c4 { grid-template-columns: repeat(4, 1fr); }
+
+/* 6. Post, page and comment content ---------------------------------- */
+/* An article without a contents list or booking card: the text takes the middle. */
+.abody > .aprose:first-child {
+	grid-column: 1 / -1;
+	inline-size: 100%;
+	max-inline-size: 46rem;
+	margin-inline: auto;
+	padding-inline-start: 0;
+}
+
+/* Page text : the same rhythm as an article. */
+.entry-content > * {
+	max-inline-size: 46rem;
+}
+
+.entry-content > * + * {
+	margin-block-start: 1.15em;
+}
+
+.entry-content > :is(h2, h3, h4, h5, h6) {
+	margin-block-start: 2em;
+}
+
+.entry-content > .alignwide {
+	max-inline-size: none;
+}
+
+/* Long words, links and titles wrap instead of widening the page. */
+.aprose,
+.entry-content,
+.cm-b,
+.anav,
+.atags,
+.ahead-h,
+.bhead h1,
+.phero h1,
+.brow-t,
+.brow-ex,
+.bcard-t,
+.bfeat-t,
+.bmeta {
+	overflow-wrap: anywhere;
+}
+
+/* Media never wider than the text. */
+:where(.aprose, .entry-content, .cm-b) :is(img, video, embed, object, iframe) {
+	max-inline-size: 100%;
+}
+
+:where(.aprose, .entry-content, .cm-b) :is(img, video) {
+	block-size: auto;
+}
+
+:where(.aprose, .entry-content) :is(iframe[src*="youtube"], iframe[src*="youtu.be"], iframe[src*="vimeo"], iframe[src*="dailymotion"]) {
+	inline-size: 100%;
+	block-size: auto;
+	aspect-ratio: 16 / 9;
+}
+
+.wp-caption {
+	max-inline-size: 100%;
+}
+
+.wp-caption img {
+	display: block;
+}
+
+.wp-caption-text {
+	margin-block-start: .5rem;
+}
+
+/* Floats stay inside the text; on phones images stand on their own line. */
+.aprose::after,
+.entry-content::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media (max-width: 35.99em) {
+	:where(.aprose, .entry-content) :is(.alignleft, .alignright) {
+		float: none;
+		margin-inline: 0;
+	}
+}
+
+/* Code and tables scroll inside their box. */
+:where(.aprose, .entry-content, .cm-b) pre {
+	max-inline-size: 100%;
+	overflow-x: auto;
+	padding: 1rem;
+	border-radius: 12px;
+	background: var(--mist, #f3f6f9);
+	font-size: .875rem;
+	line-height: 1.6;
+}
+
+:where(.aprose, .entry-content, .cm-b) table {
+	display: block;
+	max-inline-size: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+}
+
+:where(.aprose, .entry-content, .cm-b) :is(th, td) {
+	padding: .5rem .75rem;
+	border: 1px solid var(--line, #dfe5eb);
+	text-align: start;
+}
+
+:where(.aprose, .entry-content) blockquote {
+	padding-inline-start: 1.25rem;
+	border-inline-start: 3px solid var(--action, #1f6feb);
+}
+
+/* Lists keep their markers inside the text column; nested lists step in. */
+:where(.aprose, .entry-content, .cm-b) :is(ul, ol) {
+	padding-inline-start: 1.5em;
+}
+
+:where(.aprose, .entry-content, .cm-b) :is(ul, ol) :is(ul, ol) {
+	margin-block: .35em;
+}
+
+:where(.aprose, .entry-content, .cm-b) li + li {
+	margin-block-start: .35em;
+}
+
+/* The article's own lists (topics, share buttons) keep the design's spacing. */
+.atags ul {
+	padding-inline-start: 0;
+}
+
+:is(.atags, .ashare) li + li {
+	margin-block-start: 0;
+}
+
+:where(.aprose, .entry-content, .cm-b) dt {
+	font-weight: 600;
+}
+
+:where(.aprose, .entry-content, .cm-b) dd {
+	margin-inline-start: 1.5em;
+}
+
+/* Classic galleries ([gallery]). */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(var(--gal-cols, 3), minmax(0, 1fr));
+	gap: .75rem;
+}
+
+.gallery-columns-1 { --gal-cols: 1; }
+.gallery-columns-2 { --gal-cols: 2; }
+.gallery-columns-4 { --gal-cols: 4; }
+.gallery-columns-5 { --gal-cols: 5; }
+.gallery-columns-6 { --gal-cols: 6; }
+.gallery-columns-7 { --gal-cols: 7; }
+.gallery-columns-8 { --gal-cols: 8; }
+.gallery-columns-9 { --gal-cols: 9; }
+
+@media (max-width: 47.99em) {
+	.gallery { --gal-cols: 2; }
+	.gallery-columns-1 { --gal-cols: 1; }
+}
+
+.gallery-item {
+	margin: 0;
+}
+
+.gallery-item img {
+	inline-size: 100%;
+	block-size: auto;
+	border-radius: 10px;
+}
+
+.gallery-caption {
+	margin-block-start: .35rem;
+	font-size: var(--fs-small, .9375rem);
+	color: var(--stone, #56606b);
+}
+
+/* A comment's text column may shrink below its widest table or code block. */
+.cm > .cm-b {
+	min-inline-size: 0;
+}
+
+/* Deep comment threads keep a readable width on phones. */
+@media (max-width: 47.99em) {
+	.cms .cms {
+		padding-inline-start: .75rem;
+		margin-inline-start: 0;
+	}
+}
+
+/* 7. Polish over the HTML design ------------------------------------- */
+
+/* Side panel: the status dot in the brand colour (not a grey "off" dot). */
+.oc-status:not(.is-open) i {
+	opacity: 1;
+	background: var(--action);
+}
+
+/* Side panel: an icon in front of each contact line. */
+.oc-lines a:has(.oc-l-ic) {
+	grid-template-columns: 2.25rem 4.75rem 1fr auto;
+	gap: .85rem;
+}
+
+.oc-l-ic {
+	display: grid;
+	place-items: center;
+	inline-size: 2.25rem;
+	block-size: 2.25rem;
+	border-radius: 50%;
+	background: var(--mist, #eef3f7);
+	color: var(--ink);
+	transition: background-color .25s, color .25s;
+}
+
+.oc-lines .oc-l-ic svg {
+	inline-size: 1rem;
+	block-size: 1rem;
+	color: currentColor;
+	translate: none;
+}
+
+.oc-lines a:hover .oc-l-ic,
+.oc-lines a:focus-visible .oc-l-ic {
+	background: var(--action);
+	color: #fff;
+}
+
+/* Side panel: areas as chips. */
+.oc-route {
+	gap: .5rem;
+}
+
+.oc-route li {
+	align-items: center;
+	padding: .35rem .75rem;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: .875rem;
+	line-height: 1.2;
+}
+
+.oc-route small {
+	padding: .1rem .35rem;
+	border-radius: 999px;
+	background: var(--mist, #eef3f7);
+}
+
+/* Side panel: social links as round buttons. */
+.oc-social {
+	gap: .5rem;
+	margin-inline-start: 0;
+}
+
+.oc-social a {
+	border: 1px solid var(--line);
+	border-radius: 50%;
+	color: var(--ink);
+	transition: background-color .25s, border-color .25s, color .25s;
+}
+
+.oc-social a:hover {
+	background: var(--ink);
+	border-color: var(--ink);
+	color: var(--surface, #fff);
+}
+
+/* 8. Form fields: a soft focus glow hugging the field ----------------
+ * The site-wide :focus-visible outline (3px, 3px away) drew a second, detached ring around
+ * the bordered fields (class "input": theme forms, Contact Form 7, comments). They get their
+ * own focus: the border turns blue and a soft halo follows the rounded corners. Borderless
+ * fields inside a bar (search overlay, postcode checker, blog search, newsletter) keep the
+ * design's own focus on their bar; buttons, links, check boxes and radios keep the outline.
+ */
+.input {
+	transition: border-color .2s, box-shadow .25s, background-color .2s;
+}
+
+.input:focus-visible {
+	outline: none;
+	border-color: var(--action);
+	box-shadow: 0 0 0 4px rgb(31 111 235 / .2);
+}
+
+/* On dark surfaces (dark mode, ink sections, the dark form cards): the lighter blue of the design (#8dbbff). */
+:is([data-theme="dark"], .sec--ink, .formcard) .input:focus-visible {
+	border-color: #8dbbff;
+	background-color: rgb(255 255 255 / .12);
+	box-shadow: 0 0 0 4px rgb(141 187 255 / .22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.input {
+		transition: none;
+	}
+}
+
+/* The article author's own comments (WordPress adds .bypostauthor): lemon initials on ink, the same mark the
+   comment walker gives the crew, so it also holds for comment lists printed without the theme's walker. */
+.bypostauthor > .cm > .cm-av { background: var(--ink-900); color: var(--lemon); box-shadow: none; }
+
+/* 9. Simple footer (footer-1.php with nothing above the bottom bar): one bar, no big name. */
+.footer--simple {
+	padding-block-start: 0;
+}
+
+.footer--simple .footer-bottom {
+	padding-block: 1.75rem;
+	border-block-start: 0;
+}
+
+.footer--simple .footer-bottom .brand {
+	margin-inline-end: auto;
+}
+
+.footer--simple .footer-bottom .logo {
+	margin-block-end: 0;
+}
+
+/* 10. Password-protected posts: the core form in the design's field and button. */
+.post-password-form > p:last-child {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: .6rem;
+}
+
+.post-password-form label {
+	display: flex;
+	flex-direction: column;
+	gap: .35rem;
+	color: var(--ink);
+	font-size: var(--fs-small);
+	font-weight: 600;
+}
+
+.post-password-form input[type="password"] {
+	min-block-size: var(--target, 44px);
+	min-inline-size: min(18rem, 100%);
+	padding: .6rem .9rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--surface);
+	color: var(--ink);
+	font: 400 var(--fs-body) var(--font-body);
+}
+
+.post-password-form input[type="submit"] {
+	min-block-size: var(--target, 44px);
+	padding: .7rem 1.25rem;
+	border: 1.5px solid transparent;
+	border-radius: var(--radius);
+	background: var(--action);
+	color: var(--on-action);
+	font: 600 var(--fs-small)/1.2 var(--font-body);
+	cursor: pointer;
+}
+
+.post-password-form input[type="submit"]:hover {
+	background: var(--action-hover);
+}
+
+/* Side panel without contact details (a fresh install): the menu stays on wide screens too. */
+@media (min-width: 64em) {
+	.offcanvas.oc-bare .oc-nav {
+		display: block;
+	}
+}

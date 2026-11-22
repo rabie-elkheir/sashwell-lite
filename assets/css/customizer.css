@@ -1,0 +1,16 @@
+/* Customizer: the "Sashwell Pro" link section. */
+#customize-theme-controls .control-section-sashwell-lite-link .accordion-section-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	padding-inline-end: 10px;
+}
+
+#customize-theme-controls .control-section-sashwell-lite-link .accordion-section-title:after {
+	display: none;
+}
+
+#customize-theme-controls .control-section-sashwell-lite-link .button {
+	margin: 0;
+}

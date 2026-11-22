@@ -1,0 +1,334 @@
+/*
+ * Sashwell Lite: Side panel and search overlay (loaded in the footer).
+ * Readable source; the theme loads this file as it is.
+ */
+
+.offcanvas .panel {
+	padding: 1.25rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom));
+	scrollbar-width: thin;
+	gap: 1.5rem
+}
+
+.offcanvas .panel-head {
+	z-index: 3;
+	background: var(--surface);
+	margin: -1.25rem -1.25rem 0;
+	padding: 1.25rem 1.25rem .75rem;
+	position: sticky;
+	inset-block-start: -1.25rem
+}
+
+.oc-body {
+	gap: 1rem;
+	display: grid
+}
+
+.oc-nav>ul {
+	counter-reset: oc
+}
+
+.oc-nav>ul>li {
+	counter-increment: oc
+}
+
+.oc-nav>ul>li>a,
+.oc-nav summary {
+	min-block-size: 3.5rem;
+	font: 600 1.375rem/1.1 var(--font-head);
+	letter-spacing: -.02em
+}
+
+.oc-nav>ul>li>a:before,
+.oc-nav summary:before {
+	content: "0" counter(oc);
+	inline-size: 2.25rem;
+	font: 600 .75rem var(--font-body);
+	letter-spacing: .04em;
+	color: var(--action-text);
+	flex: none
+}
+
+.oc-nav summary {
+	justify-content: flex-start
+}
+
+.oc-nav summary .chev {
+	margin-inline-start: auto
+}
+
+.oc-nav details a {
+	font-size: var(--fs-small);
+	color: var(--stone);
+	padding-inline-start: 2.25rem
+}
+
+.oc-nav details a:hover,
+.oc-nav details a[aria-current] {
+	color: var(--ink)
+}
+
+.oc-body {
+	gap: 0
+}
+
+.oc-body>* {
+	border-block-start: 1px solid var(--line);
+	padding-block: 1.75rem
+}
+
+.oc-body>:first-child {
+	border: 0;
+	padding-block-start: .5rem
+}
+
+.oc-status {
+	font-size: var(--fs-micro);
+	letter-spacing: .02em;
+	color: var(--stone);
+	align-items: center;
+	gap: .6rem;
+	display: flex
+}
+
+.oc-status i {
+	background: var(--stone);
+	opacity: .6;
+	border-radius: 50%;
+	block-size: .45rem;
+	inline-size: .45rem
+}
+
+.oc-status.is-open i {
+	opacity: 1;
+	background: #22a06b;
+	animation: 2.4s infinite oc-ping;
+	box-shadow: 0 0 #22a06b66
+}
+
+@keyframes oc-ping {
+	70% {
+		box-shadow: 0 0 0 6px #22a06b00
+	}
+
+	to {
+		box-shadow: 0 0 #22a06b00
+	}
+}
+
+.oc-h {
+	font: 600 1.25rem/1.25 var(--font-head);
+	letter-spacing: -.02em;
+	color: var(--ink);
+	margin-block: .9rem .35rem
+}
+
+.oc-h span {
+	color: var(--stone)
+}
+
+.oc-phone {
+	min-block-size: 3.5rem;
+	font: 700 clamp(2rem, 1.6rem + 1.6vw, 2.5rem)/1 var(--font-head);
+	letter-spacing: -.04em;
+	color: var(--ink);
+	font-variant-numeric: tabular-nums;
+	background: linear-gradient(var(--action), var(--action)) 0 92% / 0 2px no-repeat;
+	align-items: center;
+	text-decoration: none;
+	transition: background-size .6s cubic-bezier(.22, 1, .36, 1), color .3s;
+	display: inline-flex;
+	position: relative
+}
+
+.oc-phone:hover,
+.oc-phone:focus-visible {
+	color: var(--action-text);
+	background-size: 100% 2px
+}
+
+.oc-lines {
+	border-block-start: 1px solid var(--line);
+	margin-block: 1.25rem -1.75rem;
+	list-style: none
+}
+
+.oc-lines li+li {
+	border-block-start: 1px solid var(--line)
+}
+
+.oc-lines a {
+	min-block-size: 3.25rem;
+	color: var(--ink);
+	grid-template-columns: 5.5rem 1fr auto;
+	align-items: center;
+	gap: 1rem;
+	text-decoration: none;
+	display: grid
+}
+
+.oc-l-k {
+	font-size: var(--fs-micro);
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: var(--stone);
+	font-weight: 600
+}
+
+.oc-l-v {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: .9375rem;
+	overflow: hidden
+}
+
+.oc-lines svg,
+.oc-more svg {
+	inline-size: .95rem;
+	color: var(--stone);
+	transition: translate .35s cubic-bezier(.22, 1, .36, 1), color .25s
+}
+
+.oc-lines a:hover svg,
+.oc-lines a:focus-visible svg,
+.oc-more:hover svg {
+	color: var(--action-text);
+	translate: 4px
+}
+
+.oc-lines a:hover .oc-l-v {
+	color: var(--action-text)
+}
+
+.oc-lines a:focus-visible,
+.oc-more:focus-visible,
+.oc-social a:focus-visible {
+	outline: 2px solid var(--action);
+	outline-offset: 2px;
+	border-radius: 4px
+}
+
+.oc-k {
+	font: 600 var(--fs-micro) var(--font-body);
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: var(--stone);
+	margin-block-end: .9rem
+}
+
+.oc-route {
+	color: var(--ink);
+	flex-wrap: wrap;
+	gap: .35rem 1.15rem;
+	font-size: .9375rem;
+	line-height: 1.5;
+	list-style: none;
+	display: flex
+}
+
+.oc-route li {
+	align-items: baseline;
+	display: inline-flex
+}
+
+.oc-route small {
+	letter-spacing: .03em;
+	color: var(--stone);
+	font-variant-numeric: tabular-nums;
+	margin-inline-start: .3rem;
+	font-size: .6875rem
+}
+
+.oc-more {
+	min-block-size: 2.75rem;
+	font-size: var(--fs-small);
+	color: var(--ink);
+	align-items: center;
+	gap: .45rem;
+	margin-block-start: .5rem;
+	font-weight: 600;
+	text-decoration: none;
+	display: inline-flex
+}
+
+.oc-end {
+	gap: 1.1rem;
+	display: grid
+}
+
+.oc-end .btn {
+	justify-content: center;
+	inline-size: 100%
+}
+
+.oc-proof {
+	font-size: var(--fs-micro);
+	color: var(--stone);
+	line-height: 1.6
+}
+
+.oc-proof b {
+	color: var(--ink);
+	font-weight: 700
+}
+
+.oc-social {
+	gap: .25rem;
+	margin-inline-start: -.75rem;
+	list-style: none;
+	display: flex
+}
+
+.oc-social a {
+	block-size: 2.75rem;
+	inline-size: 2.75rem;
+	color: var(--stone);
+	place-items: center;
+	transition: color .25s;
+	display: grid
+}
+
+.oc-social a:hover {
+	color: var(--ink)
+}
+
+.oc-social svg {
+	fill: currentColor;
+	inline-size: 1.15rem
+}
+
+.motion .offcanvas.open .oc-body>*,
+.motion .offcanvas.open .oc-nav>ul>li {
+	animation: .7s cubic-bezier(.22, 1, .36, 1) both oc-in;
+	animation-delay: calc(.2s + var(--i, 0) * 70ms)
+}
+
+.oc-body>:nth-child(2),
+.oc-nav>ul>li:nth-child(2) {
+	--i: 1
+}
+
+.oc-body>:nth-child(3),
+.oc-nav>ul>li:nth-child(3) {
+	--i: 2
+}
+
+.oc-nav>ul>li:nth-child(4) {
+	--i: 3
+}
+
+.oc-nav>ul>li:nth-child(5) {
+	--i: 4
+}
+
+@keyframes oc-in {
+	0% {
+		opacity: 0;
+		translate: 0 12px
+	}
+}
+
+@media (prefers-reduced-motion:reduce) {
+	.oc-status.is-open i {
+		animation: none
+	}
+}
